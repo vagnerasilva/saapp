@@ -1,0 +1,195 @@
+<ion-view view-title="Form1 "   >
+        <ion-nav-title>
+        <img src="img/icn-arrow-back.png"
+        style="    position: fixed;
+                  top: 40px;
+                  left: 49px;
+          "  ui-sref="app.home"  >
+            <img src="img/logo-maybelinne.png" style="
+            position: fixed;
+              top: 32.5px;
+              left: 232px;
+              width: 304px;
+              height: 31px;
+    
+"  >
+        </ion-nav-title>
+    <ion-content ng-class="{expanded:$scope.isExpanded}"   class="_Form">
+
+<md-content layout-padding="">
+
+        <div> 
+            <p class="FillText"> --- Fill in correctly and detaily </p>
+            <p class="the-personalText"> THE PERSONAL CONSUMER DATA </p>
+        </div>
+        <style type="text/css">
+          ion-header-bar{
+           
+            height: 100px !important;
+
+          }
+        .Rectangle-3 {
+          width: 768px;
+          height: 832px;
+          background-color: #f6f6f6;
+        }
+        </style>
+    <div class="Rectangle-3">
+      <form name="userForm">
+<!--
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-xs="">
+            <label>Company (Disabled)</label>
+            <input ng-model="user.company" disabled="">
+          </md-input-container>
+
+          <md-input-container>
+            <label>Enter date</label>
+            <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+          </md-input-container>
+        </div>
+-->
+
+
+          <md-content  layout-gt-sm="row" layout-padding>
+            <div>
+                <md-input-container class="md-block" flex-gt-sm="">
+                    <label>Consumer name</label>
+                    <input ng-model="user.consumername">
+                    </md-input-container>
+            </div>
+          </md-content>
+
+        <div class="row">
+          <div class="col col-50"  > 
+                  <md-content  layout-gt-sm="row" layout-padding>
+                  <label> Country
+                    <md-input-container class="" flex-gt-sm="">
+                       
+                       
+                       <select name="carlist" form="carform">
+                          <option ng-repeat="country in countrys" value="{{country.abbrev}}" > {{country.abbrev}} </option>
+
+                       </select>
+
+
+                      </md-input-container>
+                      </label>
+                      </md-content>
+          </div>
+          <div class="col col-50"  > 
+          <md-content  layout-gt-sm="row" layout-padding>
+                <label>State 
+                    <md-input-container class="" flex-gt-sm="">
+                       
+                 
+                        <select ng-model="user.state">
+                          <option ng-repeat="state in states" value="{{state.abbrev}}">
+                            {{state.abbrev}}
+                          </option>
+                        </select>
+
+                      </md-input-container>
+                    </label>
+              </md-content>
+          </div>
+      </div>      
+
+
+      <div class="row">
+          <div class="col col-50"  > 
+          <md-content layout-gt-xs="row" layout-padding> 
+
+                <md-input-container class="md-block" flex-gt-sm="">
+                      <label>City </label>
+                      <input ng-model="user.city">
+                </md-input-container>
+          </md-content>
+          </div>
+          <div class="col col-50"  > 
+          <md-content layout-gt-xs="row" layout-padding> 
+                <md-input-container class="md-block" flex-gt-sm="">
+                      <label>Ocupation</label>
+                      <input ng-model="user.ocupation">
+                </md-input-container>
+          </md-content>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col col-50"  > 
+        <md-content layout-gt-xs="row" layout-padding> 
+              <md-input-container class="md-block" flex-gt-sm="" > 
+                <label>Date of birth</label>
+                <md-datepicker ng-model="user.date"></md-datepicker>
+              </md-input-container>
+              
+         </md-content>     
+        </div>
+        <div class="col col-50"  > 
+            <md-content layout-gt-xs="row" layout-padding> 
+            <label>Gender 
+              <md-input-container class="md-block" flex-gt-sm="">
+                       
+                        <select  ng-model="user.gender">
+                          <option ng-repeat="gender in genders" value="{{gender.abbrev}}">
+                            {{gender.abbrev}}
+                          </option>
+                        </select>
+              </md-input-container>
+              </label>
+        </md-content>
+        </div>
+      </div>
+
+
+          <md-content  layout-gt-sm="row" layout-padding>
+            <div>
+              <md-input-container class="md-block" >
+                <label>Email</label>
+                <input ng-model="user.email" type="email">
+              </md-input-container>
+            </div>
+          </md-content>
+
+
+
+      </form>
+          <div>
+          <div class="row">
+<div class="col col-25"  > 
+</div>
+<div class="col col-50"  > 
+            <ul>
+                <li>
+                    <md-card ui-sref="app.skintype"  class="card  cardboxblackslim box_shape  ">
+                     <h2 class="START-NOW"  > NEXT </h2>
+                     
+                     <img   src="img/icn-arrow.png"
+                            class="icn_arrow"
+                            style="
+                            box-shadow: none;
+                        "
+
+                            >
+                    
+                    </md-card>
+                    <!--
+                              <pre>{{cliente | json}}</pre>
+          <pre>{{user | json}}</pre>
+-->
+                </li>
+            </ul>
+          </div>
+          </div>
+      </div>
+    </div>
+
+
+  </md-content>
+
+
+        <style type="text/css">
+
+        </style>
+    </ion-content>
+</ion-view>

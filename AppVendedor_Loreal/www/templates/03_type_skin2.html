@@ -1,0 +1,199 @@
+<ion-view view-title="SkinType">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/fotoheader2.png');">
+
+        </div>
+        
+
+
+
+        <div class="   line_title" >
+                                <md-card  class="card cardboxblack  box_shapetype  " >
+                                    
+                                     <h2 class="titletype" >SKIN TYPE </h2>
+                                    
+                                </md-card>
+        </div>
+<style type="text/css">
+    .line_title {
+      width: 101px;
+      height: 96px;
+      background-color: #fc2561;
+      border: solid 4px #fc2561;
+      margin-left: 100px;
+    }
+    .space{
+         height: 100px;
+    }
+    .box_shapetype {
+              width: 380px;
+              height: 119.5px;
+              background-color: #f6f6f6;
+
+
+    }
+    .titletype{
+                  width: auto;
+                  height: 42px;
+                  font-family: NeueHelveticaBQ;
+                  font-size: 56px;
+                  font-weight: bold;
+                  font-stretch: condensed;
+                  letter-spacing: -0.1px;
+                  text-align: center;
+                  color: #000000;
+                  color: var(--black);
+                  padding: 20px;
+    }
+
+    .container {
+position:relative;
+}
+.container .textbox {
+width:200px;
+height:150px;
+position:absolute;
+top:0;
+left:0;
+-webkit-transform: scale(0);
+transform: scale(0);
+border-radius:5px;
+background-color: rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,.75);
+box-shadow: 0px 0px 15px 2px rgba(255,255,255,.75);
+}
+.container:hover .textbox {
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+.text {
+padding-top: 50px;
+}
+.textbox {
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+
+
+</style>
+
+<div class="container">
+  <img src="" alt="">
+    <div class="textbox">
+      <p class="text">TEXT</p>
+    </div>
+</div>
+
+
+
+
+       
+        <div class="list animate-fade-slide-in-right">
+        
+
+
+        </div>
+
+        <div class="list half animate-fade-slide-in-right"  ">
+            <div class="space" >
+                
+            </div>
+
+            <div ng-click= escolha('normal') class=" container   card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2> NORMAL</h2>
+                    <img class="full-image" src="img/normal.png">
+
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+            <div  class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>DRY</h2>
+                    <img class="full-image" src="img/dry.png">
+
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+        </div>
+        <div class="list half animate-fade-slide-in-right  ">
+            <div class="space" >
+                
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>OILY</h2>
+                    <img class="full-image" src="img/oily.png">
+
+                       
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+            <div  class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>COMBINATION</h2>
+                    <img class="full-image" src="img/combination.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+            <div class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>teste</h2>
+                    <img class="full-image" src="img/combination.png">
+                    <div class="text">
+                        <h1>Lorem ipsum.</h1>
+                            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
+                            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+                        <div class="dots">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+           
+            <div class="tile"> 
+                <img src='https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80'/>
+                <div class="text">
+                  <h1>Lorem ipsum.</h1>
+                      <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
+                      <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
+                  <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                  </div>
+                </div>
+          </div>
+
+        </div>
+        
+        <div>
+            <ul>
+                <li>
+                    <md-card ui-sref="app.skincolor"  class="card  cardboxblackslim box_shape  ">
+                     <h2 class="START-NOW"  > NEXT </h2>
+                     
+                     <img   src="img/seta.png"
+                            class="icn_arrow">
+                    
+                    </md-card>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

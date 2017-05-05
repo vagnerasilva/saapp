@@ -1,0 +1,62 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/AppVendedor_01_Splash.jpg) center; background-size: cover;"
+                                ui-sref="app.home"  
+                                ng-click="loginEmail()"
+
+    >
+        <!--
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>Thronester</h1>
+            </div>
+        </div>
+        -->
+        <!--
+        <div class="list">
+            <ion-md-input placeholder="Username" highlight-color="balanced" type="text"></ion-md-input>
+            <ion-md-input placeholder="Password" highlight-color="energized" type="password"></ion-md-input>
+        </div>
+        -->
+        <div class="padding" ng-hide=true >
+            <button ui-sref="app.home"  ng-click="loginEmail()"  class="button button-full button-assertive ink">Login</button>
+        </div>
+        <div class="padding" ng-hide=true  >
+            <button ui-sref="app.home"    ng-click="logout()"    class="button button-full button-assertive ink">logout</button>
+        </div>
+
+        <div>
+
+            <ul>
+                <li>
+                    <md-card  ng-hide=true  ui-sref="app.home"  
+                                ng-click="loginEmail()"
+                                class="card  cardboxblackslim box_shape  "
+                                style="
+                                    margin-left: 200px;
+                                    margin-top: 600px;
+                                    font-size: 50px;
+                                "
+                    >
+                     <h2 class="START-NOW"    >Start</h2>
+                     
+                    
+                    
+                    </md-card>
+                </li>
+            </ul>
+
+        </div>
+
+        </div>
+
+
+        <!--
+        <div class="button-bar social-login">
+            <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
+            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900">Twitter</button>
+            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900">Facebook</button>
+        </div>
+        -->
+    </ion-content>
+</ion-view>

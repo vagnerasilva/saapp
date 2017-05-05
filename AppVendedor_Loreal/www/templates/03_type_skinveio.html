@@ -1,0 +1,129 @@
+<ion-view view-title="SkinType">
+        <ion-nav-title>
+            <img src="img/logo-maybelinne.png" style="
+    margin-top: 14px;
+    height: 48px;
+"  >
+        </ion-nav-title>
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/fotoheader2.png');">
+
+        </div>
+        
+
+
+
+        <div class="   line_title" >
+                                <md-card  class="card cardboxblack  box_shapetype  " >
+                                    
+                                     <h2 class="titletype" >SKIN TYPE </h2>
+                                    
+                                </md-card>
+        </div>
+<style type="text/css">
+
+
+
+</style>
+
+<div class="container">
+  <img src="" alt="">
+    <div class="textbox">
+      <p class="text">TEXT</p>
+    </div>
+</div>
+
+<style type="text/css">
+.space{
+  height: 30px;
+}
+
+</style>
+<div class="row space">
+</div>
+
+
+<div class="row">
+        <div class="col col-50"  > 
+          <md-radio-group ng-model="user.type_skin">
+          <div class=" fundo"  ng-repeat="it in skinTypesL">  
+              <div class="tile  "> 
+                  <img ng-src='{{it.url}}' />
+                  <div class="text">
+                    <h1>{{it.typeskin}}.</h1>
+                        <h2 class="animate-text">More {{it.typeskin}}.</h2>
+                        <p class="animate-text">{{it.text}} </p>
+                        <md-radio-button   ng-value="it.value"
+                                 aria-label="{{it.typeskin}}" > 
+                        </md-radio-button>
+
+                  </div>
+              </div>
+          </div>
+          </md-radio-group>
+        </div>
+                <div class="col col-50"  > 
+          <md-radio-group ng-model="user.type_skin">
+          <div class=" fundo"  ng-repeat="it in skinTypesR">  
+              <div class="tile  "> 
+                  <img ng-src='{{it.url}}' />
+                  <div class="text">
+                    <h1>{{it.typeskin}}.</h1>
+                        <h2 class="animate-text">More {{it.typeskin}}.</h2>
+                        <p class="animate-text">{{it.text}} </p>
+                        <md-radio-button   ng-value="it.value"
+                                 aria-label="{{it.typeskin}}" > 
+                        </md-radio-button>
+
+                  </div>
+              </div>
+          </div>
+          </md-radio-group>
+        </div>
+
+
+  </div>
+
+<div class="row">
+        <div class="col col-25"  > 
+        </div>
+        <div class="col col-50"  > 
+
+      
+            <ul>
+                <li>
+                    <md-card ui-sref="app.skincolor"  class="card  cardboxblackslim box_shape  ">
+                     <h2 class="START-NOW"  > NEXT </h2>
+                     
+                     <img   src="img/icn-arrow.png"
+                            class="icn_arrow" style="
+                            box-shadow: none;
+                        ">
+                    
+                    </md-card>
+                    <!--
+                      <pre>{{cliente | json}}</pre>
+                      <pre>{{user | json}}</pre>
+                      <pre>{{avatarData | json}}</pre>
+                      -->
+                </li>
+            </ul>
+      </div>
+</div>
+        <!--
+          <form ng-submit="submit()"   >
+            <p style="margin-bottom: 0;">Graphic radio buttons need to be labeled with the <code>aria-label</code> attribute.</p>
+            <p style="margin-top: 0;">Selected Avatar: <span class="radioValue">{{ user.type_skin }}</span></p>
+
+            <md-radio-group ng-model="user.type_skin">
+              <md-radio-button ng-repeat="it in skinTypes"
+                               ng-value="it.value"
+                               aria-label="{{it.typeskin}}">
+                  <md-icon md-svg-icon="{{it.id}}"></md-icon>
+              </md-radio-button>
+            </md-radio-group>
+    </form>
+    -->
+    </ion-content>
+
+</ion-view>

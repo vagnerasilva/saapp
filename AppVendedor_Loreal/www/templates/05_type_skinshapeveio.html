@@ -1,0 +1,172 @@
+<ion-view view-title="FaceShape">
+        <ion-nav-title>
+            <img src="img/logo-maybelinne.png" style="
+    margin-top: 14px;
+    height: 48px;
+"  >
+        </ion-nav-title>
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/00_banner-face-shape@3x.png');">
+
+            </div>
+        </div>
+
+
+<div class="line_title" >
+                                <md-card  class="card cardboxblack  box_shape_shape  " >
+                                    
+                                     <h2 class="Hello" >FACE SHAPE </h2>
+                                    
+                                </md-card>
+
+</div>
+
+<style type="text/css">
+    .box_shape_shape{
+      
+    }
+
+    .line_title {
+      width: 101px;
+      height: 96px;
+      background-color: #fc2561;
+      border: solid 4px #fc2561;
+    }
+    .space{
+         height: 100px;
+    }
+</style>
+
+
+
+
+
+        <!--
+        <div class="list animate-fade-slide-in-right">
+        
+        </div>
+
+        <div class="list half animate-fade-slide-in-right"  ">
+            <div class="space" >
+                
+            </div>
+
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2> CIRCLE</h2>
+                    <img class="full-image" src="img/01-face-circle@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+           
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>OVAL</h2>
+                    <img class="full-image" src="img/02_face-oval@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+          
+        </div>
+      
+        <div class="list half animate-fade-slide-in-right  ">
+            <div class="space" >
+                
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>SQUARE</h2>
+                    <img class="full-image" src="img/03_face_shape-square@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>HEART</h2>
+                    <img class="full-image" src="img/03_face_shape-square@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+        </div>
+        -->
+  <div class="row">
+     <div class="col col-50"  > 
+        <div class="list half animate-fade-slide-in-right  "  >
+          <md-radio-group ng-model="user.type_skinshape">
+          <div class=" fundo"  ng-repeat="it in skinShapesL">  
+              <div class="tile  "> 
+                  <img ng-src='{{it.url}}' />
+                  <div class="text">
+                    <h1>{{it.typeshape}}.</h1>
+                        <h2 class="animate-text">More {{it.typeshape}}.</h2>
+                        <p class="animate-text">{{it.text}}. </p>
+                        <md-radio-button   ng-value="it.value"
+                                 aria-label="{{it.typeshape}}" > 
+                        </md-radio-button>
+
+                  </div>
+              </div>
+          </div>
+          </md-radio-group>
+        </div>
+      </div>
+      <div class="col col-50"  > 
+        <div class="list half animate-fade-slide-in-right  "  >
+          <md-radio-group ng-model="user.type_skinshape">
+          <div class=" fundo"  ng-repeat="it in skinShapesR">  
+              <div class="tile  "> 
+                  <img ng-src='{{it.url}}' />
+                  <div class="text">
+                    <h1>{{it.typeshape}}.</h1>
+                        <h2 class="animate-text">More {{it.typeshape}}.</h2>
+                        <p class="animate-text">{{it.text}}. </p>
+                        <md-radio-button   ng-value="it.value"
+                                 aria-label="{{it.typeshape}}" > 
+                        </md-radio-button>
+
+                  </div>
+              </div>
+          </div>
+          </md-radio-group>
+        </div>
+      </div>
+    </div>
+<div class="row">
+        <div class="col col-25"  > 
+        </div>
+        <div class="col col-50"  >
+        <div>
+
+        <div>
+            <ul>
+                <li>
+                    <md-card  ui-sref="app.eyestype"  class="card  cardboxblackslim box_shape  ">
+                     <h2 class="START-NOW"  > NEXT </h2>
+                     
+                     <img   src="img/icn-arrow.png"
+                            class="icn_arrow" style="
+                            box-shadow: none;
+                        "  >
+                    
+                    </md-card>
+                    <!--
+                      <pre>{{cliente | json}}</pre>
+                      <pre>{{user | json}}</pre>
+                      <pre>{{avatarData | json}}</pre>
+                      -->
+                </li>
+            </ul>
+        </div>
+      </div>
+      </div>
+</div>
+    </ion-content>
+</ion-view>

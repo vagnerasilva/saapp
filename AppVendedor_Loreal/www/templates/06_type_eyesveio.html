@@ -1,0 +1,215 @@
+<ion-view view-title="EyesTyoe">
+        <ion-nav-title>
+            <img src="img/logo-maybelinne.png" style="
+    margin-top: 14px;
+    height: 48px;
+"  >
+        </ion-nav-title>
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/00_banner-eyes-type@3x.png');">
+
+            </div>
+        </div>
+
+
+                            <div class="line_title" >
+                                <md-card  class="card cardboxblack  box_eyestype  " >
+                                    
+                                     <h2 class="Hello" > EYES TYPE </h2>
+                                    
+                                </md-card>
+                            </div>
+
+
+<style type="text/css">
+    .line_title {
+      width: 101px;
+      height: 96px;
+      background-color: #fc2561;
+      border: solid 4px #fc2561;
+    }
+    .space{
+         height: 100px;
+    }
+</style>
+
+
+
+  <!--
+
+       
+        <div class="list animate-fade-slide-in-right">
+        
+
+
+        </div>
+
+        <div class="list half animate-fade-slide-in-right"  ">
+            <div class="space" >
+                
+            </div>
+
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2> CLOSE SET</h2>
+                    <img class="full-image" src="img/05_eye-close-set@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+          
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>DEEP SET</h2>
+                    <img class="full-image" src="img/06_eye-deep-set@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>PRODUTING</h2>
+                    <img class="full-image" src="img/07_eyes-protuding@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>MONOLID</h2>
+                    <img class="full-image" src="img/08_eye-monolid@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+--><!--
+        </div>
+
+        <div class="list half animate-fade-slide-in-right  ">
+            <div class="space" >
+                
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+            <h2>UPTURNED</h2>
+                    <img class="full-image" src="img/01_eye-upturned@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+            <h2>HOODED</h2>
+                    <img class="full-image" src="img/02-eyes-hooded@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+              <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>DOWNTURNED</h2>
+                    <img class="full-image" src="img/03_eye-downturned@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+             <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>WIDESET</h2>
+                    <img class="full-image" src="img/04_eyes-wide-set@3x.png">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+
+                </div>
+            </div>
+        </div>
+        -->
+  <div class="row">
+     <div class="col col-50"  > 
+        <div class="list half animate-fade-slide-in-right  "  >
+          <md-radio-group ng-model="user.type_eyes">
+          <div class=" fundo"  ng-repeat="it in typeEyesL">  
+              <div class="tile  "> 
+                  <img ng-src='{{it.url}}' />
+                  <div class="text">
+                    <h1>{{it.typeeye}}.</h1>
+                        <h2 class="animate-text">More {{it.typeshape}}.</h2>
+                        <p class="animate-text">{{it.text}}. </p>
+                        <md-radio-button   ng-value="it.value"
+                                 aria-label="{{it.typeeye}}" > 
+                        </md-radio-button>
+                    <div class="dots">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          </md-radio-group>
+        </div>
+</div>
+     <div class="col col-50"  > 
+        <div class="list half animate-fade-slide-in-right  "  >
+          <md-radio-group ng-model="user.type_eyes">
+          <div class=" fundo"  ng-repeat="it in typeEyesR">  
+              <div class="tile  "> 
+                  <img ng-src='{{it.url}}' />
+                  <div class="text">
+                    <h1>{{it.typeeye}}.</h1>
+                        <h2 class="animate-text">More {{it.typeeye}}.</h2>
+                        <p class="animate-text">{{it.text}}. </p>
+                        <md-radio-button   ng-value="it.value"
+                                 aria-label="{{it.typeeye}}" > 
+                        </md-radio-button>
+                    <div class="dots">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          </md-radio-group>
+        </div>
+</div>
+</div>
+
+
+<div class="row">
+        <div class="col col-25"  > 
+        </div>
+        <div class="col col-50"  >
+        <div>
+
+        <div>
+            <ul>
+                <li>
+                    <md-card ui-sref="app.lipstype"  class="card  cardboxblackslim box_shape  ">
+                     <h2 class="START-NOW"  > NEXT </h2>
+                     
+                     <img   src="img/icn-arrow.png"
+                            class="icn_arrow" style="
+                            box-shadow: none;
+                        "  >
+                    
+                    </md-card>
+                    <!--
+          <pre>{{cliente | json}}</pre>
+          <pre>{{user | json}}</pre>
+          -->
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+</div>
+    </ion-content>
+</ion-view>
