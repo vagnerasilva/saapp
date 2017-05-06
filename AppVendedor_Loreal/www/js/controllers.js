@@ -1319,7 +1319,7 @@ console.log(" Valores do user ")
          $scope.user = OtherFriends.novofim();
        //  $scope.cliente = OtherFriends.getcliente();
 
-        var refArray = new Firebase("https://appvendedorloreal.firebaseio.com/cadastros/");
+        var refArray = new Firebase("https://appvendedorloreal.firebaseio.com/cadastros/testenv");
             $scope.messages = $firebaseArray(refArray);
               // add new items to the array
               // the message is automatically added to our Firebase database!

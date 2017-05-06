@@ -209,7 +209,7 @@
    #linha{
         position: absolute;
     left: 380px;
-    top: 328px;
+    top: 330px;
     width: 2px;
     height: 360px;
     z-index: 1;
@@ -220,7 +220,7 @@
     left: 380px;
     top: 722px;
     width: 2px;
-    height: 360px;
+    height: 358px;
     z-index: 1;
       background-color: #999999;
    }
@@ -230,7 +230,7 @@
     top: 522px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -254,7 +254,7 @@
     top: 912px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -274,12 +274,12 @@
    }
 </style>
 
-<div>
+<md-card>
   <div id="pink"></div>
   <div id="cinza">
     <p class="skin-type">SKIN TYPE</p> 
   </div>
-</div>
+</md-card>
 
 
 <div class="">
@@ -296,15 +296,22 @@
   <div id="black" ></div>
   <div id="boxpink1" ng-show="normal"  ></div>
   <div id="boxpink2" ng-show="dry"  ></div>
-  <img src="img/img-skin-normal.png" 
-       class="img_skin_normal tile"
-       ng-click="clicktype('NORMAL')"
-       >
-  
-  <img src="img/img-skin-dry.png" 
-        class="img_skin_dry tile"
-        ng-click="clicktype('DRY')"
-        >
+
+<div class="tile img_skin_normal" > 
+    <img ng-src='img/img-skin-normal.png' 
+    />
+      <div class="text"   ng-click="clicktype('NORMAL')" >
+               <p class="animate-text info  ">It is balanced in oiliness, has delicate texture and pores are less evident. </p>
+      </div>
+</div>  
+
+<div class="tile img_skin_dry " > 
+    <img ng-src='img/img-skin-dry.png' 
+    />
+      <div class="text"  ng-click="clicktype('DRY')" >
+               <p class="animate-text info ">It hasn't brightness, is rough and the pores are almost invisible. </p>
+      </div>
+</div>
 <div id="linha"></div>
 </div>
 
@@ -322,35 +329,129 @@
   <div id="black2" ></div>
   <div id="boxpink3" ng-show="oil"  ></div>
   <div id="boxpink4" ng-show="combination"  ></div>
-  <img src="img/img-skin-oily.png" 
-        class="img_skin_oily  tile"
-         ng-click="clicktype('OILY')"
-        >
-  <img src="img/img-skin-combination.png" 
-        class="img_skin_combination tile"
-         ng-click="clicktype('COMBINATION')"
-        >
+
+  <div class="tile img_skin_oily" > 
+    <img ng-src='img/img-skin-oily.png' 
+    />
+      <div class="text" ng-click="clicktype('OILY')" >
+               <p class="animate-text info ">It has excess oil, shiny appearance and dilated pores. </p>
+      </div>
+  </div>
+
+  <div class="tile img_skin_combination" > 
+    <img ng-src='img/img-skin-combination.png' 
+    />
+      <div class="text" ng-click="clicktype('COMBINATION')" >
+               <p class="animate-text info ">It has more intense oiliness on the forehead and nose. On the cheeks it is dry or normal. </p>
+      </div>
+  </div>
+
   <div id="linha2"></div>
 </div>
 
 
-<!--
-<div class="">
-    
-  <div id="shape_gray2" >
-    <p id="">OILY  </p>
-    <p id="" > COMBINATION </p>
-  </div> 
-  <div id="black2" ></div>
-  <img src="img/img-skin-oily.png" class="img_skin_oily">
+      <style type="text/css">
+.info{
+  width: 207.5px;
+  height: 66.5px;
+  font-family: Helvetica;
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #f6f6f6;
+}
+      .tile:hover span
+{
+  opacity:1;
+  transform:translateY(0px);
+}
+        .tile
+{
+
   
-  <img src="img/img-skin-combination.png" class="img_skin_combination">
+  background-color:#444;
+  display:inline-block;
+  background-size:cover;
+  position:relative;
+  cursor:pointer;
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+  overflow:hidden;
+  color:white;
+  font-family:'Roboto';
+  
+}
+.tile img
+{
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:0;
+  transition: all 0.4s ease-out;
+}
+.tile .text
+{
+/*   z-index:99; */
+  position:absolute;
+  padding:30px;
+  height:calc(100% - 60px);
+}
+.tile h1
+{
+ 
+  font-weight:300;
+  margin:0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.tile h2
+{
+  font-weight:100;
+  margin:20px 0 0 0;
+  font-style:italic;
+   transform: translateX(200px);
+}
+.tile p
+{
+  font-weight:300;
+  margin:50px 0 0 0;
+  line-height: 25px;
+/*   opacity:0; */
+  transform: translateX(-200px);
+  transition-delay: 0.2s;
+}
+.animate-text
+{
+  opacity:0;
+  transition: all 0.6s ease-in-out;
+}
+.tile:hover
+{
+/*   background-color:#99aeff; */
+box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+  transform:scale(1.05);
+}
+.tile:hover img
+{
+  opacity: 0.2;
+}
+.tile:hover .animate-text
+{
+  transform:translateX(0);
+  opacity:1;
+}
 
-</div>
--->
+      </style>  
 
 
-<div id="shape_btn" ng-show="nextcolor"  ui-sref="app.skincolor"   style="
+
+
+
+
+
+
+<md-card id="shape_btn" ng-show="nexttype"  ui-sref="app.skincolor"   style="
                                                                       z-index: 2;
                                                                       background-color: #ffffff;
                                                                       border: solid 1.5px #000000;" >
@@ -358,24 +459,15 @@
   <div id="">
     <p id="Next" style="color:#fc2561"  >NEXT <img src="img/icn-arrow.png"  >  </p> 
   </div>
-         <pre style=" 
-       position: fixed;
-        top: 800px;
-        left: 437px;
-        ">{{user|json}} <button ng-click= "salvar()"   >  </button> </pre>
-              <pre style=" 
-       position: fixed;
-        top: 800px;
-        left: 337px;
-        ">{{cliente|json}}</pre>
-</div>
+         
+</md-card>
 
-<div id="shape_btn"   ui-sref="app.skincolor"   >
+<md-card id="shape_btn"   ui-sref="app.skincolor"   >
   <div id=""></div>
   <div id="">
-    <p id="Next">NEXT <img src="img/icn-arrow-desable.png">  </p> 
+    <p id="Next">NEXT  <img src="img/icn-arrow-desable.png">  </p> 
   </div>
-</div>
+</md-card>
 
 <br>
 <br>
