@@ -782,6 +782,7 @@ console.log($scope.resultado);
       console.log($scope.user);
       if (valor=="FAIR") {
               $scope.fair= !($scope.fair);
+
     $scope.light = false;
     $scope.mlight = false;
     $scope.mtan = false;
@@ -1322,7 +1323,7 @@ console.log($scope.resultado);
          $scope.user = OtherFriends.novofim();
        //  $scope.cliente = OtherFriends.getcliente();
 
-        var refArray = new Firebase("https://appvendedorloreal.firebaseio.com/cadastros/testenv");
+        var refArray = new Firebase("https://appvendedorloreal.firebaseio.com/cadastros");
             $scope.messages = $firebaseArray(refArray);
               // add new items to the array
               // the message is automatically added to our Firebase database!
