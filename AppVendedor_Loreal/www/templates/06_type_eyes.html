@@ -15,7 +15,7 @@
 "  >
         </ion-nav-title>
     <ion-content ng-class="{expanded:$scope.isExpanded}">
-        <div class="hero slide-up" style="background-image: url('img/00_banner-eyes-type@3x.png');">
+        <div class="hero " style="background-image: url('img/00_banner-eyes-type@3x.png');">
 
         </div>
         
@@ -89,6 +89,7 @@
     margin-top: 50px;
    
     border: solid 4px #000000;
+    z-index: -1;
 }
 .img_banner_Skin {
   width: 768px;
@@ -135,7 +136,7 @@
       #black2{
     position: absolute;
     left: 48px;
-    top: 896px;
+    top: 912px;
     width: 173px;
     height: 96px;
     z-index: 1;
@@ -170,7 +171,7 @@
 }
 #dry {
     position: relative;
-    left: 68px;
+    left: 100px;
     top: -50px;
   
   height: 23px;
@@ -223,6 +224,102 @@
     z-index: 1;
       background-color: #999999;
    }
+      #boxpink1{
+    position: absolute;
+    left: 48px;
+    top: 522px;
+
+    z-index: 1;
+      width: 336px;
+      height: 167.5px;
+      background-color: #fc2561;
+
+   
+   }
+   #boxpink2{
+    position: absolute;
+    left: 380px;
+    top: 522px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
+      #boxpink3{
+    position: absolute;
+    left: 48px;
+    top: 912px;
+
+    z-index: 1;
+      width: 336px;
+      height: 167.5px;
+      background-color: #fc2561;
+
+   
+   }
+   #boxpink4{
+    position: absolute;
+    left: 380px;
+    top: 912px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
+      #boxpink5{
+    position: absolute;
+    left: 48px;
+    top: 1302px;
+
+    z-index: 1;
+      width: 336px;
+      height: 167.5px;
+      background-color: #fc2561;
+
+   
+   }
+   #boxpink6{
+    position: absolute;
+    left: 380px;
+    top: 1302px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
+      #boxpink7{
+    position: absolute;
+    left: 48px;
+    top: 1738px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
+      #boxpink8{
+    position: absolute;
+    left: 380px;
+    top: 1738px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
 </style>
 
 <div>
@@ -240,12 +337,21 @@
     <p id="dry" > HOODED </p>
   </div> 
   <div id="traco1"></div>
-  
+  <div id="traco1"  ng-show="upturned" style="background-color: #fc2561 ;z-index: 2;"  ></div>
   <div id="traco2"></div>
+  <div id="traco2" ng-show="hooded" style="background-color: #fc2561 ;z-index: 2;"  ></div>
   <div id="black" ></div>
-  <img src="img/01_eye-upturned@3x.png" class="img_skin_normal">
+  <div id="boxpink1" ng-show="upturned"  ></div>
+  <div id="boxpink2" ng-show="hooded"  ></div>
+  <img src="img/01_eye-upturned@3x.png" 
+       class="img_skin_normal tile tile"
+       ng-click="clickeyes('UPTURNED')"
+       >
   
-  <img src="img/02-eyes-hooded@3x.png" class="img_skin_dry">
+  <img src="img/02-eyes-hooded@3x.png" 
+       class="img_skin_dry tile tile"
+       ng-click="clickeyes('HOODED')"
+       >
 <div id="linha"></div>
 </div>
 
@@ -257,11 +363,20 @@
     <p id="Combination" > WIDE SET </p>
   </div> 
   <div id="traco3"></div>
+  <div id="traco3" ng-show="downturned" style="background-color: #fc2561 ;z-index: 2;"   ></div>
   <div id="traco4"></div>
+  <div id="traco4" ng-show="wideset" style="background-color: #fc2561 ;z-index: 2;"  ></div>
   <div id="black2" ></div>
-
-  <img src="img/03_eye-downturned@3x.png" class="img_skin_oily">
-  <img src="img/04_eyes-wide-set@3x.png" class="img_skin_combination">
+  <div id="boxpink3" ng-show="downturned"  ></div>
+  <div id="boxpink4" ng-show="wideset"  ></div>
+  <img  src="img/03_eye-downturned@3x.png" 
+        class="img_skin_oily tile"
+        ng-click="clickeyes('DOWNTURNED')"
+        >
+  <img src="img/04_eyes-wide-set@3x.png" 
+       class="img_skin_combination tile"
+       ng-click="clickeyes('WIDE SET')"
+       >
   <div id="linha2"></div>
 </div>
 <!--
@@ -295,28 +410,40 @@
  <style type="text/css">
   #shape_gray3 {
     position: fixed;
-    left: 48px;
-    top: 1248px;
+    left: 0px;
+    top: 1548px;
     z-index: 1;
   margin-left: 48px;
   width: 672px;
   height: 192.5px;
   background-color: #f6f6f6;
 }
-  #shape_gray3 {
+  #shape_gray4 {
     position: fixed;
-    left: 48px;
-    top: 1440px;
+    left: 0;
+    top: 1110px;
     z-index: 1;
   margin-left: 48px;
   width: 672px;
   height: 192.5px;
   background-color: #f6f6f6;
 }
-      #black4{
+    #black3{
      position: fixed;
     left: 48px;
-    top: 1700px;
+    top: 1302px;
+    width: 173px;
+    height: 96px;
+    z-index: 1;
+      width: 672px;
+      height: 167.5px;
+      background-color: #000000;
+      
+   }
+         #black4{
+     position: fixed;
+    left: 48px;
+    top: 1738px;
     width: 173px;
     height: 96px;
     z-index: 1;
@@ -326,18 +453,59 @@
       
    
    }
-         #black4{
-     position: fixed;
-    left: 48px;
-    top: 1700px;
-    width: 173px;
-    height: 96px;
+    #traco6{
+    position: absolute;
+    left: 75px;
+    top: 1110px;
+    width: 60px;
+    height: 2px;
     z-index: 1;
-      width: 672px;
-      height: 167.5px;
       background-color: #000000;
-      
-   
+   }
+    #traco5{
+    position: absolute;
+    left: 420px;
+    top: 1110px;
+    width: 60px;
+    height: 2px;
+    z-index: 1;
+      background-color: #000000;
+   }
+       #traco7{
+    position: absolute;
+    left: 75px;
+    top: 1547px;
+    width: 60px;
+    height: 2px;
+    z-index: 1;
+      background-color: #000000;
+   }
+    #traco8{
+    position: absolute;
+    left: 420px;
+    top: 1547px;
+    width: 60px;
+    height: 2px;
+    z-index: 1;
+      background-color: #000000;
+   }
+      #linha3{
+        position: absolute;
+    left: 380px;
+    top: 1110px;
+    width: 2px;
+    height: 360px;
+    z-index: 1;
+      background-color: #999999;
+   }
+      #linha4{
+        position: absolute;
+    left: 380px;
+    top: 1547px;
+    width: 2px;
+    height: 360px;
+    z-index: 1;
+      background-color: #999999;
    }
 </style>
 
@@ -345,12 +513,59 @@
 <div>
   <div id="shape_gray3"   ></div>
   <div id="black3"></div>
+
 </div>
 
 
 <div>
   <div id="shape_gray4"   ></div>
+  <div id="traco5" ng-show="deepset" style="background-color: #fc2561 ;z-index: 2;"  ></div>
+  <div id="traco5"></div>
+  <div id="traco6" ng-show="closeset" style="background-color: #fc2561 ;z-index: 2;"  ></div>
+  <div id="traco6"></div>
+  <div id="boxpink5" ng-show="closeset"  ></div>
+  <div id="boxpink6" ng-show="deepset "  ></div>
   <div id="black4"></div>
+  <div id="traco7" ng-show="produting" style="background-color: #fc2561 ;z-index: 2;" ></div>
+  <div id="traco7"></div>
+  <div id="traco8" ng-show="monolid" style="background-color: #fc2561 ;z-index: 2;" ></div>
+  <div id="traco8"></div>
+  <div id="boxpink7" ng-show="produting"  ></div>
+  <div id="boxpink8" ng-show="monolid"  ></div>
+<p id="uppertext">CLOSE SET </p>
+<img src="img/05_eye-close-set@3x.png" 
+     class="img_close tile "
+     ng-click="clickeyes('CLOSE SET')"
+     >
+<p id="lowertext"> DEEP SET</p>
+<img src="img/06_eye-deep-set@3x.png" 
+     class="img_deep tile"
+     ng-click="clickeyes('DEEP SET')"
+     >
+<p id="protext">PROTUDING </p>
+<img src="img/07_eyes-protuding@3x.png" 
+     class="img_pro tile"
+     ng-click="clickeyes('PROTUDING')"
+     >
+<p id="monotext"> MONOLID </p>
+<img src="img/08_eye-monolid@3x.png" 
+     class="img_mono tile"
+     ng-click="clickeyes('MONOLID')"
+     >
+  <div id="linha3"></div>
+  <div id="linha4"></div>
+</div>
+
+ 
+
+<div id="shape_btn"  ng-show="nexteyes" ui-sref="app.lipstype" style="
+                                                                      z-index: 2;
+                                                                      background-color: #ffffff;
+                                                                      border: solid 1.5px #000000;"  >
+  <div id=""></div>
+  <div id="">
+    <p id="Next"  style="color:#fc2561" >NEXT <img src="img/icn-arrow.png">  </p> 
+  </div>
 </div>
 
 
@@ -366,9 +581,109 @@
 <br>
 <br>
 <div class="footer" >
-
+p
 </div>
 <style type="text/css">
+#protext{
+position: fixed;
+        top: 1574px;
+    left: 75px;
+    z-index: 1;
+  /*width: 176.5px;*/
+  height: 23.5px;
+  font-family: NeueHelveticaBQ;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: condensed;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #000000;
+  color: var(--black);
+}
+#monotext{
+position: fixed;
+        top: 1574px;
+    left: 420px;
+    z-index: 1;
+  /*width: 176.5px;*/
+  height: 23.5px;
+  font-family: NeueHelveticaBQ;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: condensed;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #000000;
+  color: var(--black);
+}
+.img_pro{
+    position: fixed;
+        top: 1622px;
+    left: 75px;
+    z-index: 1;
+  width: 264px;
+  height: 240px;
+  object-fit: contain;
+}
+.img_mono{
+  position: fixed;
+        top: 1622px;
+    left: 420px;
+    z-index: 1;
+  width: 264px;
+  height: 240px;
+  object-fit: contain;
+}
+.img_close{
+    position: fixed;
+    top: 1180px;
+    left: 75px;
+    z-index: 1;
+  width: 264px;
+  height: 240px;
+  object-fit: contain;
+}
+.img_deep{
+  position: fixed;
+    top: 1180px;
+    left: 420px;
+    z-index: 1;
+  width: 264px;
+  height: 240px;
+  object-fit: contain;
+}
+#uppertext{
+position: fixed;
+    top: 1135px;
+    left: 75px;
+    z-index: 1;
+  /*width: 176.5px;*/
+  height: 23.5px;
+  font-family: NeueHelveticaBQ;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: condensed;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #000000;
+  color: var(--black);
+}
+#lowertext{
+position: fixed;
+    top: 1135px;
+    left: 420px;
+    z-index: 1;
+  /*width: 176.5px;*/
+  height: 23.5px;
+  font-family: NeueHelveticaBQ;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: condensed;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #000000;
+  color: var(--black);
+}
 .img_skin_oily {
         position: relative;
     left: 78px;
@@ -389,7 +704,10 @@
   object-fit: contain;
 }
 .footer{
-
+  position: absolute;
+      top: 2276px;
+  height: 24px;
+  color: white;
 }
 #Combination {
      position: relative;

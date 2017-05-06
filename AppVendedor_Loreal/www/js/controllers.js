@@ -699,6 +699,432 @@ cont ++
           }
     });
 
+
+//#### PAGINa skintype  ##########/////
+    
+    $scope.normal = false;
+    $scope.dry = false;
+    $scope.oil = false;
+    $scope.combination = false;
+
+
+    $scope.nexttype=false;
+    $scope.clicktype = function(valor){
+      $scope.user.type_skin= valor;
+      console.log($scope.user)
+
+console.log(" Valores do user ")
+
+      console.log($scope.user);
+      if (valor=="NORMAL") {
+              $scope.normal= !($scope.normal);
+ 
+    $scope.dry = false;
+    $scope.oil = false;
+    $scope.combination = false;
+               $scope.nexttype = true;
+              console.log($scope.normal);
+      }
+      if(valor=="DRY") {
+              $scope.dry= !($scope.dry);
+    $scope.normal = false;
+   
+    $scope.oil = false;
+    $scope.combination = false;
+               $scope.nexttype = true;
+              console.log($scope.dry);
+      } 
+      if(valor=="OILY") {
+                $scope.oil= !(  $scope.oil);
+          
+
+    $scope.normal = false;
+    $scope.dry = false;
+
+    $scope.combination = false;
+               $scope.nexttype = true;
+              console.log(  $scope.oil);
+      }
+      if(valor=="COMBINATION") {
+               $scope.combination= !( $scope.combination);
+             
+               
+                  
+    $scope.normal = false;
+    $scope.dry = false;
+    $scope.oil = false;
+   
+   
+               $scope.nexttype = true;
+              console.log( $scope.combination);
+      }
+
+
+}// Fim dos skintype
+
+
+
+//#### PAGINa SKIN COLOR  ##########/////
+    
+    $scope.fair = false;
+    $scope.light = false;
+    $scope.mlight = false;
+    $scope.mtan = false;
+
+
+    $scope.nextcolor=false;
+    $scope.clickcolor = function(valor){
+      $scope.user.type_skincolor= valor;
+      console.log("clicado no skin color " + valor );
+      console.log($scope.user);
+      if (valor=="FAIR") {
+              $scope.fair= !($scope.fair);
+    $scope.light = false;
+    $scope.mlight = false;
+    $scope.mtan = false;
+              $scope.nextcolor = true;
+              console.log($scope.fair);
+      }
+      if(valor=="LIGHT") {
+              $scope.light= !($scope.light);
+    $scope.fair = false;
+    $scope.mlight = false;
+    $scope.mtan = false;
+              $scope.nextcolor = true;
+              console.log($scope.light);
+      } 
+      if(valor=="MEDIUM LIGHT") {
+               $scope.mlight= !( $scope.mlight);
+          
+
+    $scope.fair = false;
+    $scope.light = false;
+    $scope.mtan = false;
+              $scope.nextcolor = true;
+              console.log( $scope.mlight);
+      }
+      if(valor=="MEDIUM TAN") {
+               $scope.mtan= !( $scope.mtan);
+             
+
+                  
+    $scope.fair = false;
+    $scope.light = false;
+    $scope.mlight = false;
+    
+   
+              $scope.nextcolor = true;
+              console.log( $scope.mtan);
+      }
+
+
+}// Fim dos skincolor
+
+//#### PAGINA SHAPE EFEITO MARCADO ##########/////
+    
+    $scope.circle = false;
+    $scope.oval = false;
+    $scope.square = false;
+    $scope.heart = false;
+
+
+    $scope.nextshapes=false;
+
+    $scope.clickshape = function(valor){
+      $scope.user.type_skinshape= valor;
+      console.log("clicado no " + valor );
+      if (valor=="CIRCLE") {
+              $scope.circle= !($scope.circle);
+
+    $scope.oval = false;
+    $scope.square = false;
+    $scope.heart = false;
+              $scope.nextshapes = true;
+              console.log($scope.circle);
+      }
+      if(valor=="OVAL") {
+              $scope.oval= !($scope.oval);
+    $scope.circle = false;
+
+    $scope.square = false;
+    $scope.heart = false;
+              $scope.nextshapes = true;
+              console.log($scope.oval);
+      } 
+      if(valor=="SQUARE") {
+              $scope.square= !($scope.square);
+          
+
+    $scope.circle = false;
+    $scope.oval = false;
+
+    $scope.heart = false;
+              $scope.nextshapes = true;
+              console.log($scope.square);
+      }
+      if(valor=="HEART") {
+              $scope.heart= !($scope.heart);
+             
+
+                  
+    $scope.circle = false;
+    $scope.oval = false;
+    $scope.square = false;
+   
+              $scope.nextshapes = true;
+              console.log($scope.heart);
+      }
+
+
+}// Fim dos shape
+
+//#### PAGINA Eyes EFEITO MARCADO ##########/////
+   
+    $scope.upturned =   false;
+    $scope.hooded =     false;
+    $scope.downturned = false;
+    $scope.wideset =    false;
+    $scope.closeset =   false;
+    $scope.deepset =    false;
+    $scope.produting =  false;
+    $scope.monolid =    false;
+
+    $scope.nexteyes=false;
+    $scope.clickeyes = function(valor){
+       $scope.user.type_eyes= valor;
+      console.log("clicado no " + valor );
+      if (valor=="UPTURNED") {
+              $scope.upturned= !($scope.upturned);
+
+    
+    $scope.hooded =     false;
+    $scope.downturned = false;
+    $scope.wideset =    false;
+    $scope.closeset =   false;
+    $scope.deepset =    false;
+    $scope.produting =  false;
+    $scope.monolid =    false;
+
+              $scope.nexteyes = true;
+              console.log($scope.upturned);
+      }
+      if(valor=="HOODED") {
+              $scope.hooded= !($scope.hooded);
+                 
+
+                  
+    $scope.upturned =   false;
+  
+    $scope.downturned = false;
+    $scope.wideset =    false;
+    $scope.closeset =   false;
+    $scope.deepset =    false;
+    $scope.produting =  false;
+    $scope.monolid =    false;
+              $scope.nexteyes = true;
+              console.log($scope.hooded);
+      } 
+      if(valor=="DOWNTURNED") {
+              $scope.downturned= !($scope.downturned);
+          
+
+                  
+    $scope.upturned =   false;
+    $scope.hooded =     false;
+ 
+    $scope.wideset =    false;
+    $scope.closeset =   false;
+    $scope.deepset =    false;
+    $scope.produting =  false;
+    $scope.monolid =    false;
+              $scope.nexteyes = true;
+              console.log($scope.downturned);
+      }
+      if(valor=="WIDE SET") {
+              $scope.wideset= !($scope.wideset);
+             
+
+    $scope.upturned =   false;
+    $scope.hooded =     false;
+    $scope.downturned = false;
+
+    $scope.closeset =   false;
+    $scope.deepset =    false;
+    $scope.produting =  false;
+    $scope.monolid =    false;
+              $scope.nexteyes = true;
+              console.log($scope.wideset);
+      }
+      if(valor=="CLOSE SET") {
+              $scope.closeset= !($scope.closeset);
+
+
+                  
+    $scope.upturned =   false;
+    $scope.hooded =     false;
+    $scope.downturned = false;
+    $scope.wideset =    false;
+
+    $scope.deepset =    false;
+    $scope.produting =  false;
+    $scope.monolid =    false;
+              $scope.nexteyes = true;
+              console.log($scope.closeset);
+      }
+    if(valor=="DEEP SET") {
+              $scope.deepset= !($scope.deepset);
+
+
+    $scope.upturned =   false;
+    $scope.hooded =     false;
+    $scope.downturned = false;
+    $scope.wideset =    false;
+    $scope.closeset =   false;
+   
+    $scope.produting =  false;
+    $scope.monolid =    false;
+
+              $scope.nexteyes = true;
+              console.log($scope.deepset);
+      }
+      //$scope.bar = !($scope.bar);
+    if(valor=="PROTUDING") {
+      console.log(valor)
+              $scope.produting= !($scope.produting);
+
+
+                  
+    $scope.upturned =   false;
+    $scope.hooded =     false;
+    $scope.downturned = false;
+    $scope.wideset =    false;
+    $scope.closeset =   false;
+    $scope.deepset =    false;
+  
+    $scope.monolid =    false;
+
+              $scope.nexteyes = true;
+              console.log($scope.produting);
+      }
+    if(valor=="MONOLID") {
+              $scope.monolid= !($scope.monolid);
+
+
+                  
+    $scope.upturned = false;
+    $scope.hooded = false;
+    $scope.downturned = false;
+    $scope.wideset = false;
+    $scope.closeset = false;
+    $scope.deepset = false;
+    $scope.produting = false;
+
+
+              $scope.nexteyes = true;
+              console.log($scope.monolid);
+      }
+    } // fIM DA FUNCAO eYES 
+
+//#### PAGINA LIPS EFEITO MARCADO ##########/////
+    $scope.bar = false;
+    $scope.small = false;
+    $scope.full = false;
+    $scope.wide = false;
+    $scope.thin = false;
+    $scope.upper = false;
+    $scope.lower = false;
+
+    $scope.nextlips=false;
+    $scope.clicklips = function(valor){
+      $scope.user.type_lips= valor;
+      console.log("clicado no " + valor );
+      console.log($scope.user);
+      if (valor=="SMALL") {
+              $scope.small= !($scope.small);
+
+                  $scope.full= false
+                  $scope.wide = false;
+                  $scope.thin = false;
+                  $scope.upper = false;
+                  $scope.lower = false;
+              $scope.nextlips = true;
+              console.log($scope.small);
+      }
+      if(valor=="FULL") {
+              $scope.full= !($scope.full);
+                  $scope.small= false;
+
+                  
+                  $scope.wide = false;
+                  $scope.thin = false;
+                  $scope.upper = false;
+                  $scope.lower = false;
+              $scope.nextlips = true;
+              console.log($scope.full);
+      } 
+      if(valor=="WIDE") {
+              $scope.wide= !($scope.wide);
+          
+
+                  
+    $scope.small = false;
+    $scope.full = false;
+
+    $scope.thin = false;
+    $scope.upper = false;
+    $scope.lower = false;
+              $scope.nextlips = true;
+              console.log($scope.full);
+      }
+      if(valor=="THIN") {
+              $scope.thin= !($scope.thin);
+             
+
+                  
+    $scope.small = false;
+    $scope.full = false;
+    $scope.wide = false;
+
+    $scope.upper = false;
+    $scope.lower = false;
+              $scope.nextlips = true;
+              console.log($scope.thin);
+      }
+      if(valor=="HEAVY UPPER") {
+              $scope.upper= !($scope.upper);
+
+
+                  
+    $scope.small = false;
+    $scope.full = false;
+    $scope.wide = false;
+    $scope.thin = false;
+
+    $scope.lower = false;
+              $scope.nextlips = true;
+              console.log($scope.upper);
+      }
+      if(valor=="HEAVY LOWER") {
+              $scope.lower= !($scope.lower);
+
+
+                  
+    $scope.small = false;
+    $scope.full = false;
+    $scope.wide = false;
+    $scope.thin = false;
+    $scope.upper = false;
+
+              $scope.nextlips = true;
+              console.log($scope.lower);
+      }
+      //$scope.bar = !($scope.bar);
+      
+    }
+
+
+ 
+
     $scope.skinTypesL = [{
         typeskin: "NORMAL",
         url: 'img/normal.png',
@@ -880,9 +1306,9 @@ cont ++
       },
     ];
    $scope.salvar = function() {
-
+       console.log($scope.user)
             $scope.cliente = OtherFriends.salvarcadastro($scope.user);
-
+       console.log($scope.cliente )
     }
 
     $scope.cliente = OtherFriends.getcliente();
@@ -900,6 +1326,8 @@ cont ++
              // $scope.addMessage = function() {
                // firebaseArray.$ref().child($scope.idCliente).set(newData);
             $scope.messages.$add($scope.cliente);
+
+            console.log("inserindo valores no firebase")
     }
 
 

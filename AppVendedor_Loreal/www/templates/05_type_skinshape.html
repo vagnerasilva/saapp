@@ -15,7 +15,7 @@
 "  >
         </ion-nav-title>
     <ion-content ng-class="{expanded:$scope.isExpanded}">
-        <div class="hero slide-up" style="background-image: url('img/00_banner-face-shape@3x.png');">
+        <div class="hero " style="background-image: url('img/00_banner-face-shape@3x.png');">
 
         </div>
         
@@ -89,6 +89,7 @@
     margin-top: 50px;
    
     border: solid 4px #000000;
+    z-index: -1;
 }
 .img_banner_Skin {
   width: 768px;
@@ -135,7 +136,7 @@
       #black2{
     position: absolute;
     left: 48px;
-    top: 896px;
+    top: 912px;
     width: 173px;
     height: 96px;
     z-index: 1;
@@ -223,6 +224,54 @@
     z-index: 1;
       background-color: #999999;
    }
+        #boxpink1{
+    position: absolute;
+    left: 48px;
+    top: 522px;
+
+    z-index: 1;
+      width: 336px;
+      height: 167.5px;
+      background-color: #fc2561;
+
+   
+   }
+   #boxpink2{
+    position: absolute;
+    left: 380px;
+    top: 522px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
+      #boxpink3{
+    position: absolute;
+    left: 48px;
+    top: 912px;
+
+    z-index: 1;
+      width: 336px;
+      height: 167.5px;
+      background-color: #fc2561;
+
+   
+   }
+   #boxpink4{
+    position: absolute;
+    left: 380px;
+    top: 912px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
 </style>
 
 <div>
@@ -240,12 +289,21 @@
     <p id="dry" > OVAL </p>
   </div> 
   <div id="traco1"></div>
-  
+  <div id="traco1"  ng-show="circle" style="background-color: #fc2561 ;z-index: 2;" ></div>
   <div id="traco2"></div>
+  <div id="traco2" ng-show="oval" style="background-color: #fc2561 ;z-index: 2;" ></div>
   <div id="black" ></div>
-  <img src="img/img-face-circle.png" class="img_skin_normal">
+  <div id="boxpink1" ng-show="circle"  ></div>
+  <div id="boxpink2" ng-show="oval"  ></div>
+  <img src="img/img-face-circle.png"
+       class="img_skin_normal tile"
+       ng-click="clickshape('CIRCLE')"
+       >
   
-  <img src="img/img-face-oval.png" class="img_skin_dry">
+  <img src="img/img-face-oval.png"
+       class="img_skin_dry tile"
+       ng-click="clickshape('OVAL')"
+       >
 <div id="linha"></div>
 </div>
 
@@ -257,11 +315,20 @@
     <p id="Combination" > HEART </p>
   </div> 
   <div id="traco3"></div>
+  <div id="traco3" ng-show="square" style="background-color: #fc2561 ;z-index: 2;"  ></div>
   <div id="traco4"></div>
+  <div id="traco4" ng-show="heart" style="background-color: #fc2561 ;z-index: 2;"   ></div>
   <div id="black2" ></div>
-
-  <img src="img/img-shape-square.png" class="img_skin_oily">
-  <img src="img/img-skin-combination.png" class="img_skin_combination">
+  <div id="boxpink3" ng-show="square"  ></div>
+  <div id="boxpink4" ng-show="heart"  ></div>
+  <img src="img/img-shape-square.png"
+       class="img_skin_oily tile"
+       ng-click="clickshape('SQUARE')"
+       >
+  <img src="img/04_face-shape-heart@3x.png" 
+       class="img_skin_combination tile"
+       ng-click="clickshape('HEART')"
+       >
   <div id="linha2"></div>
 </div>
 

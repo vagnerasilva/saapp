@@ -16,7 +16,7 @@
 "  >
         </ion-nav-title>
     <ion-content ng-class="{expanded:$scope.isExpanded}">
-        <div class="hero slide-up" style="background-image: url('img/00_banner-skin-color@3x.png');">
+        <div class="hero " style="background-image: url('img/00_banner-skin-color@3x.png');">
 
         </div>
         
@@ -90,6 +90,7 @@
     margin-top: 50px;
    
     border: solid 4px #000000;
+    z-index: -1;
 }
 .img_banner_Skin {
   width: 768px;
@@ -136,7 +137,7 @@
       #black2{
     position: absolute;
     left: 48px;
-    top: 896px;
+    top: 912px;
     width: 173px;
     height: 96px;
     z-index: 1;
@@ -171,7 +172,7 @@
 }
 #dry {
     position: relative;
-    left: 68px;
+    left: 80px;
     top: -50px;
   
   height: 23px;
@@ -224,6 +225,54 @@
     z-index: 1;
       background-color: #999999;
    }
+       #boxpink1{
+    position: absolute;
+    left: 48px;
+    top: 522px;
+
+    z-index: 1;
+      width: 336px;
+      height: 167.5px;
+      background-color: #fc2561;
+
+   
+   }
+   #boxpink2{
+    position: absolute;
+    left: 380px;
+    top: 522px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
+      #boxpink3{
+    position: absolute;
+    left: 48px;
+    top: 912px;
+
+    z-index: 1;
+      width: 336px;
+      height: 167.5px;
+      background-color: #fc2561;
+
+   
+   }
+   #boxpink4{
+    position: absolute;
+    left: 380px;
+    top: 912px;
+
+    z-index: 1;
+      width: 340px;
+      height: 167.5px;
+      background-color: #fc2561;
+      
+   
+   }
 </style>
 
 <div>
@@ -240,13 +289,23 @@
     <p id="Normal">FAIR  </p>
     <p id="dry" > LIGHT </p>
   </div> 
-  <div id="traco1"></div>
+  <div id="traco1" ng-show="fair" style="background-color: #fc2561 ;z-index: 2;"  ></div>
+    <div id="traco1"></div>
   
+  <div id="traco2" ng-show="light" style="background-color: #fc2561 ;z-index: 2;"   ></div>
   <div id="traco2"></div>
   <div id="black" ></div>
-  <img src="img/01_skin-fair@3x.png" class="img_skin_normal">
+  <div id="boxpink1" ng-show="fair"  ></div>
+  <div id="boxpink2" ng-show="light"  ></div>
+  <img  src="img/01_skin-fair@3x.png" 
+        class="img_skin_normal tile"
+        ng-click="clickcolor('FAIR')"
+        >
   
-  <img src="img/02-skin-light@3x.png" class="img_skin_dry">
+  <img src="img/02-skin-light@3x.png" 
+       class="img_skin_dry tile"
+       ng-click="clickcolor('LIGHT')"
+       >
 <div id="linha"></div>
 </div>
 
@@ -257,13 +316,25 @@
     <p id="Oily">MEDIUM LIGHT  </p>
     <p id="Combination" > MEDIUM TAN</p>
   </div> 
+  <div id="traco3" ng-show="mlight" style="background-color: #fc2561 ;z-index: 2;"  ></div>
   <div id="traco3"></div>
+  <div id="traco4" ng-show="mtan" style="background-color: #fc2561 ;z-index: 2;"   ></div>
   <div id="traco4"></div>
   <div id="black2" ></div>
+  <div id="boxpink3" ng-show="mlight"  ></div>
+  <div id="boxpink4" ng-show="mtan"  ></div>
+  <img src="img/03_skin-medium@3x.png" 
+       class="img_skin_oily tile"
+       ng-click="clickcolor('MEDIUM LIGHT')"
 
-  <img src="img/03_skin-medium@3x.png" class="img_skin_oily">
-  <img src="img/img-skin-m-tan@3x.png" class="img_skin_combination">
-  <div id="linha2"></div>
+       >
+  <img src="img/img-skin-m-tan@3x.png" 
+       class="img_skin_combination tile"
+       ng-click="clickcolor('MEDIUM TAN')"
+       >
+  <div id="linha2"
+
+      ></div>
 </div>
 
 
@@ -280,15 +351,24 @@
   <img src="img/img-skin-combination.png" class="img_skin_combination">
 
 </div>
--->
+
 <img src="img/06_skin-tan@3x.png" class="img_skin_tan">
 <img src="img/06_skin-deep@3x.png" class="img_skin_deep">
-
+-->
+<div id="shape_btn"  ng-show="nextcolor" ui-sref="app.skinshape" style="
+                                                                      z-index: 2;
+                                                                      background-color: #ffffff;
+                                                                      border: solid 1.5px #000000;"  >
+  <div id=""></div>
+  <div id="">
+    <p id="Next">NEXT <img src="img/icn-arrow-desable.png">  </p> 
+  </div>
+</div>
 
 <div id="shape_btn"   ui-sref="app.skinshape"   >
   <div id=""></div>
   <div id="">
-    <p id="Next">NEXT <img src="img/icn-arrow-desable.png">  </p> 
+    <p id="Next" style="color:#fc2561" >NEXT <img src="img/icn-arrow.png">  </p> 
   </div>
 </div>
 <br>
@@ -296,7 +376,7 @@
 <br>
 <br>
 <br>
-<div class="footer" >
+<div class="footer" style=" color: white">
  p
 </div>
 <style type="text/css">

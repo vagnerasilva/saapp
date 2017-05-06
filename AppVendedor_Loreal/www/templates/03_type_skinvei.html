@@ -224,54 +224,6 @@
     z-index: 1;
       background-color: #999999;
    }
-      #boxpink1{
-    position: absolute;
-    left: 48px;
-    top: 522px;
-
-    z-index: 1;
-      width: 336px;
-      height: 167.5px;
-      background-color: #fc2561;
-
-   
-   }
-   #boxpink2{
-    position: absolute;
-    left: 380px;
-    top: 522px;
-
-    z-index: 1;
-      width: 340px;
-      height: 167.5px;
-      background-color: #fc2561;
-      
-   
-   }
-      #boxpink3{
-    position: absolute;
-    left: 48px;
-    top: 912px;
-
-    z-index: 1;
-      width: 336px;
-      height: 167.5px;
-      background-color: #fc2561;
-
-   
-   }
-   #boxpink4{
-    position: absolute;
-    left: 380px;
-    top: 912px;
-
-    z-index: 1;
-      width: 340px;
-      height: 167.5px;
-      background-color: #fc2561;
-      
-   
-   }
 </style>
 
 <div>
@@ -288,23 +240,13 @@
     <p id="Normal">NORMAL  </p>
     <p id="dry" > DRY </p>
   </div> 
-  <div id="traco1" ng-show="normal" style="background-color: #fc2561 ;z-index: 2;"  ></div>
   <div id="traco1"></div>
-
-  <div id="traco2" ng-show="dry" style="background-color: #fc2561 ;z-index: 2;"  ></div>
+  
   <div id="traco2"></div>
   <div id="black" ></div>
-  <div id="boxpink1" ng-show="normal"  ></div>
-  <div id="boxpink2" ng-show="dry"  ></div>
-  <img src="img/img-skin-normal.png" 
-       class="img_skin_normal tile"
-       ng-click="clicktype('NORMAL')"
-       >
+  <img src="img/img-skin-normal.png" class="img_skin_normal">
   
-  <img src="img/img-skin-dry.png" 
-        class="img_skin_dry tile"
-        ng-click="clicktype('DRY')"
-        >
+  <img src="img/img-skin-dry.png" class="img_skin_dry">
 <div id="linha"></div>
 </div>
 
@@ -315,21 +257,12 @@
     <p id="Oily">OILY  </p>
     <p id="Combination" > COMBINATION </p>
   </div> 
-  <div id="traco3" ng-show="oil" style="background-color: #fc2561 ;z-index: 2;" ></div>
   <div id="traco3"></div>
-  <div id="traco4" ng-show="combination" style="background-color: #fc2561 ;z-index: 2;" ></div>
   <div id="traco4"></div>
   <div id="black2" ></div>
-  <div id="boxpink3" ng-show="oil"  ></div>
-  <div id="boxpink4" ng-show="combination"  ></div>
-  <img src="img/img-skin-oily.png" 
-        class="img_skin_oily  tile"
-         ng-click="clicktype('OILY')"
-        >
-  <img src="img/img-skin-combination.png" 
-        class="img_skin_combination tile"
-         ng-click="clicktype('COMBINATION')"
-        >
+
+  <img src="img/img-skin-oily.png" class="img_skin_oily">
+  <img src="img/img-skin-combination.png" class="img_skin_combination">
   <div id="linha2"></div>
 </div>
 
@@ -348,35 +281,12 @@
 
 </div>
 -->
-
-
-<div id="shape_btn" ng-show="nextcolor"  ui-sref="app.skincolor"   style="
-                                                                      z-index: 2;
-                                                                      background-color: #ffffff;
-                                                                      border: solid 1.5px #000000;" >
-  <div id=""></div>
-  <div id="">
-    <p id="Next" style="color:#fc2561"  >NEXT <img src="img/icn-arrow.png"  >  </p> 
-  </div>
-         <pre style=" 
-       position: fixed;
-        top: 800px;
-        left: 437px;
-        ">{{user|json}} <button ng-click= "salvar()"   >  </button> </pre>
-              <pre style=" 
-       position: fixed;
-        top: 800px;
-        left: 337px;
-        ">{{cliente|json}}</pre>
-</div>
-
 <div id="shape_btn"   ui-sref="app.skincolor"   >
   <div id=""></div>
   <div id="">
     <p id="Next">NEXT <img src="img/icn-arrow-desable.png">  </p> 
   </div>
 </div>
-
 <br>
 <br>
 <br>
