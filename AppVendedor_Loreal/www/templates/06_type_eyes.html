@@ -209,7 +209,7 @@
    #linha{
         position: absolute;
     left: 380px;
-    top: 328px;
+    top: 330px;
     width: 2px;
     height: 360px;
     z-index: 1;
@@ -220,7 +220,7 @@
     left: 380px;
     top: 722px;
     width: 2px;
-    height: 360px;
+    height: 358px;
     z-index: 1;
       background-color: #999999;
    }
@@ -230,7 +230,7 @@
     top: 522px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -254,7 +254,7 @@
     top: 912px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -278,7 +278,7 @@
     top: 1302px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -302,7 +302,7 @@
     top: 1738px;
 
     z-index: 1;
-      width: 340px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
       
@@ -343,15 +343,25 @@
   <div id="black" ></div>
   <div id="boxpink1" ng-show="upturned"  ></div>
   <div id="boxpink2" ng-show="hooded"  ></div>
-  <img src="img/01_eye-upturned@3x.png" 
-       class="img_skin_normal tile tile"
-       ng-click="clickeyes('UPTURNED')"
-       >
+
   
-  <img src="img/02-eyes-hooded@3x.png" 
-       class="img_skin_dry tile tile"
-       ng-click="clickeyes('HOODED')"
-       >
+  <div class="tile img_skin_normal" > 
+    <img ng-src="img/01_eye-upturned@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('UPTURNED')" >
+               <p class="animate-text info ">The outer corner is slightly raised, resembling an almond. </p>
+      </div>
+  </div>
+
+
+  <div class="tile img_skin_dry" > 
+    <img ng-src="img/02-eyes-hooded@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('HOODED')" >
+               <p class="animate-text info ">When open the moving eyelid does not appear. </p>
+      </div>
+  </div>
+
 <div id="linha"></div>
 </div>
 
@@ -369,44 +379,30 @@
   <div id="black2" ></div>
   <div id="boxpink3" ng-show="downturned"  ></div>
   <div id="boxpink4" ng-show="wideset"  ></div>
-  <img  src="img/03_eye-downturned@3x.png" 
-        class="img_skin_oily tile"
-        ng-click="clickeyes('DOWNTURNED')"
-        >
-  <img src="img/04_eyes-wide-set@3x.png" 
-       class="img_skin_combination tile"
-       ng-click="clickeyes('WIDE SET')"
-       >
+
+
+  <div class="tile img_skin_oily" > 
+    <img ng-src="img/03_eye-downturned@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('DOWNTURNED')" >
+               <p class="animate-text info ">Has a soft drop on the outer corners. </p>
+      </div>
+  </div>
+
+  <div class="tile img_skin_combination" > 
+    <img ng-src="img/04_eyes-wide-set@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('WIDE SET')" >
+               <p class="animate-text info ">The space between the eyes is bigger than the width of the eye itself. </p>
+      </div>
+  </div>
+
   <div id="linha2"></div>
 </div>
-<!--
-<p id="">CLOSE SET </p>
-<img src="img/05_eye-close-set@3x.png" class="img_skin_oily">
-<p id="" > DEEP SET</p>
-<img src="img/06_eye-deep-set@3x.png" class="img_skin_oily">
-<p id="">PROTUDING </p>
-<img src="img/07_eyes-protuding@3x.png" class="img_skin_oily">
-<p id="" > MONOLID </p>
-<img src="img/08_eye-monolid@3x.png" class="img_skin_oily">
 
 
 
-<div class="">
-    
-  <div id="shape_gray2" >
-    <p id="">OILY  </p>
-    <p id="" > COMBINATION </p>
-  </div> 
-  <div id="black2" ></div>
-  <img src="img/img-skin-oily.png" class="img_skin_oily">
-  
-  <img src="img/img-skin-combination.png" class="img_skin_combination">
 
-</div>
-
-
-
--->
  <style type="text/css">
   #shape_gray3 {
     position: fixed;
@@ -533,25 +529,39 @@
   <div id="boxpink7" ng-show="produting"  ></div>
   <div id="boxpink8" ng-show="monolid"  ></div>
 <p id="uppertext">CLOSE SET </p>
-<img src="img/05_eye-close-set@3x.png" 
-     class="img_close tile "
-     ng-click="clickeyes('CLOSE SET')"
-     >
+
+<div class="tile img_close" > 
+    <img ng-src="img/05_eye-close-set@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('CLOSE SET')" >
+               <p class="animate-text info ">The space between the eyes is smaller than the width of the eye itself. </p>
+      </div>
+</div>
 <p id="lowertext"> DEEP SET</p>
-<img src="img/06_eye-deep-set@3x.png" 
-     class="img_deep tile"
-     ng-click="clickeyes('DEEP SET')"
-     >
+<div class="tile img_deep" > 
+    <img ng-src="img/06_eye-deep-set@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('DEEP SET')" >
+               <p class="animate-text info ">They appear to be in the face creating the impression that the forehead bone is large. </p>
+      </div>
+</div>
 <p id="protext">PROTUDING </p>
-<img src="img/07_eyes-protuding@3x.png" 
-     class="img_pro tile"
-     ng-click="clickeyes('PROTUDING')"
-     >
+<div class="tile img_pro tile" > 
+    <img ng-src="img/07_eyes-protuding@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('PROTUDING')" >
+               <p class="animate-text info ">It has the appearance of projected eyelids and larger eyes. </p>
+      </div>
+</div>
 <p id="monotext"> MONOLID </p>
-<img src="img/08_eye-monolid@3x.png" 
-     class="img_mono tile"
-     ng-click="clickeyes('MONOLID')"
-     >
+
+<div class="tile img_mono" > 
+    <img ng-src="img/08_eye-monolid@3x.png" 
+    />
+      <div class="text" ng-click="clickeyes('MONOLID')" >
+               <p class="animate-text info ">Their surfaces are flat and do not have much volume. </p>
+      </div>
+</div>     
   <div id="linha3"></div>
   <div id="linha4"></div>
 </div>
@@ -569,7 +579,7 @@
 </md-card>
 
 
-<md-card id="shape_btn" ui-sref="app.lipstype"  >
+<md-card id="shape_btn"   >
   <div id=""></div>
   <div id="">
     <p id="Next">NEXT <img src="img/icn-arrow-desable.png">  </p> 

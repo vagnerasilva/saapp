@@ -209,7 +209,7 @@
    #linha{
         position: absolute;
     left: 380px;
-    top: 328px;
+    top: 330px;
     width: 2px;
     height: 360px;
     z-index: 1;
@@ -220,7 +220,7 @@
     left: 380px;
     top: 722px;
     width: 2px;
-    height: 360px;
+    height: 358px;
     z-index: 1;
       background-color: #999999;
    }
@@ -230,7 +230,7 @@
     top: 522px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -254,7 +254,7 @@
     top: 912px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -295,15 +295,23 @@
   <div id="black" ></div>
   <div id="boxpink1" ng-show="circle"  ></div>
   <div id="boxpink2" ng-show="oval"  ></div>
-  <img src="img/img-face-circle.png"
-       class="img_skin_normal tile"
-       ng-click="clickshape('CIRCLE')"
-       >
-  
-  <img src="img/img-face-oval.png"
-       class="img_skin_dry tile"
-       ng-click="clickshape('OVAL')"
-       >
+
+  <div class="tile img_skin_normal" > 
+    <img ng-src="img/img-face-circle.png" 
+    />
+      <div class="text" ng-click="clickshape('CIRCLE')" >
+               <p class="animate-text info ">It does not have very defined angles and It is wider in cheekbones. </p>
+      </div>
+  </div>
+
+  <div class="tile img_skin_dry" > 
+    <img ng-src="img/img-face-oval.png" 
+    />
+      <div class="text" ng-click="clickshape('OVAL')" >
+               <p class="animate-text info ">It has soft corners and the chin is a little thin. </p>
+      </div>
+  </div>
+
 <div id="linha"></div>
 </div>
 
@@ -321,36 +329,42 @@
   <div id="black2" ></div>
   <div id="boxpink3" ng-show="square"  ></div>
   <div id="boxpink4" ng-show="heart"  ></div>
-  <img src="img/img-shape-square.png"
-       class="img_skin_oily tile"
-       ng-click="clickshape('SQUARE')"
-       >
-  <img src="img/04_face-shape-heart@3x.png" 
-       class="img_skin_combination tile"
-       ng-click="clickshape('HEART')"
-       >
+
+  <div class="tile img_skin_oily" > 
+    <img ng-src="img/img-shape-square.png" 
+    />
+      <div class="text" ng-click="clickshape('SQUARE')" >
+               <p class="animate-text info ">The cheeks, chin and forehead have the same width. </p>
+      </div>
+  </div>
+
+  <div class="tile img_skin_combination" > 
+    <img ng-src='img/04_face-shape-heart@3x.png' 
+    />
+      <div class="text" ng-click="clickshape('HEART')" >
+               <p class="animate-text info ">The forehead is wider than the jaw and chin. </p>
+      </div>
+  </div>
+
   <div id="linha2"></div>
 </div>
 
 
-<!--
-<div class="">
-    
-  <div id="shape_gray2" >
-    <p id="">OILY  </p>
-    <p id="" > COMBINATION </p>
-  </div> 
-  <div id="black2" ></div>
-  <img src="img/img-skin-oily.png" class="img_skin_oily">
-  
-  <img src="img/img-skin-combination.png" class="img_skin_combination">
 
-</div>
--->
-<md-card id="shape_btn" ui-sref="app.eyestype"  >
+<md-card id="shape_btn" ng-show="nextshapes" ui-sref="app.eyestype" style="
+                                                                      z-index: 2;
+                                                                      background-color: #ffffff;
+                                                                      border: solid 1.5px #000000;"  >
   <div id=""></div>
   <div id="">
-    <p id="Next">NEXT {{nextshapes}} <img src="img/icn-arrow-desable.png">  </p> 
+    <p id="Next" style="color:#fc2561"  >NEXT  <img src="img/icn-arrow.png">  </p> 
+  </div>
+</md-card>
+
+<md-card id="shape_btn"   >
+  <div id=""></div>
+  <div id="">
+    <p id="Next">NEXT  <img src="img/icn-arrow-desable.png">  </p> 
   </div>
 </md-card>
 <br>

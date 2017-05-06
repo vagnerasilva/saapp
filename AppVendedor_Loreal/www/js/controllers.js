@@ -699,6 +699,7 @@ cont ++
           }
     });
 
+$scope.resultado={}
 
 //#### PAGINa skintype  ##########/////
     
@@ -711,6 +712,7 @@ cont ++
     $scope.nexttype=false;
     $scope.clicktype = function(valor){
       $scope.user.type_skin= valor;
+
       console.log($scope.user)
 
 console.log(" Valores do user ")
@@ -718,7 +720,7 @@ console.log(" Valores do user ")
       console.log($scope.user);
       if (valor=="NORMAL") {
               $scope.normal= !($scope.normal);
- 
+              $scope.resultado.url1= 'img/normal.png';
     $scope.dry = false;
     $scope.oil = false;
     $scope.combination = false;
@@ -727,6 +729,7 @@ console.log(" Valores do user ")
       }
       if(valor=="DRY") {
               $scope.dry= !($scope.dry);
+              $scope.resultado.url1= 'img/dry.png';
     $scope.normal = false;
    
     $scope.oil = false;
@@ -736,7 +739,7 @@ console.log(" Valores do user ")
       } 
       if(valor=="OILY") {
                 $scope.oil= !(  $scope.oil);
-          
+                $scope.resultado.url1= 'img/oily.png';
 
     $scope.normal = false;
     $scope.dry = false;
@@ -747,7 +750,7 @@ console.log(" Valores do user ")
       }
       if(valor=="COMBINATION") {
                $scope.combination= !( $scope.combination);
-             
+               $scope.resultado.url1= 'img/combination.png';
                
                   
     $scope.normal = false;
@@ -758,7 +761,7 @@ console.log(" Valores do user ")
                $scope.nexttype = true;
               console.log( $scope.combination);
       }
-
+console.log($scope.resultado);
 
 }// Fim dos skintype
 

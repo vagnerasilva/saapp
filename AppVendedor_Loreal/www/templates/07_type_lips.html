@@ -192,7 +192,7 @@
    #linha{
         position: absolute;
     left: 380px;
-    top: 328px;
+    top: 329px;
     width: 2px;
     height: 360px;
     z-index: 1;
@@ -203,7 +203,7 @@
     left: 380px;
     top: 722px;
     width: 2px;
-    height: 360px;
+    height: 358px;
     z-index: 1;
       background-color: #999999;
    }
@@ -309,7 +309,7 @@
     top: 522px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -333,7 +333,7 @@
     top: 912px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -357,7 +357,7 @@
     top: 1302px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -392,19 +392,25 @@
   <div id="black"></div>
   <div id="boxpink1" ng-show="small"  ></div>
   <div id="boxpink2" ng-show="full"  ></div>
-  <div class="">
-  <img src="img/01_lips-mouth-small@3x.png" 
-       class="img_skin_normal tile " 
-       ng-click='clicklips("SMALL")' >
-       
 
-  </div>
+      
+<div class="tile img_skin_normal" > 
+    <img ng-src="img/01_lips-mouth-small@3x.png" 
+    />
+      <div class="text" ng-click='clicklips("SMALL")' >
+               <p class="animate-text info ">The mouth and lips small and discreet. </p>
+      </div>
+</div> 
 
-  <img src="img/04_lips-mouth-full@3x.png" 
-       class="img_skin_dry tile "
-       ng-click='clicklips("FULL")' 
-        >
-       
+
+
+<div class="tile img_skin_dry" > 
+    <img ng-src="img/04_lips-mouth-full@3x.png" 
+    />
+      <div class="text" ng-click='clicklips("FULL")' >
+               <p class="animate-text info ">Lips are very thick and protruding. </p>
+      </div>
+</div>       
 <div id="linha"></div>
 </div>
 
@@ -423,13 +429,22 @@
   <div id="boxpink3" ng-show="wide"  ></div>
   <div id="boxpink4" ng-show="thin"  ></div>
 
-  <img src="img/03_lips-mouth-wide@3x.png" 
-       class="img_skin_oily tile "
-       ng-click='clicklips("WIDE")'
-       >
-  <img src="img/02_lips-mouth-thin@3x.png" 
-       class="img_skin_combination tile "
-       ng-click='clicklips("THIN")'>
+<div class="tile img_skin_oily" > 
+    <img ng-src="img/03_lips-mouth-wide@3x.png" 
+    />
+      <div class="text" ng-click='clicklips("WIDE")' >
+               <p class="animate-text info ">The mouth are wide, regardless of mouth size. </p>
+      </div>
+</div>
+
+<div class="tile img_skin_combination" > 
+    <img ng-src="img/02_lips-mouth-thin@3x.png" 
+    />
+      <div class="text" ng-click='clicklips("THIN")' >
+               <p class="animate-text info ">Lips are strait, regardless of mouth size. </p>
+      </div>
+</div>
+
   <div id="linha2"></div>
 </div>
 
@@ -469,14 +484,22 @@
 <div id="boxpink6" ng-show="lower"  ></div> 
 
 <p id="uppertext">HEAVY UPPER </p>
-<img src="img/05_lips-mouth-heavy-upper@3x.png" 
-     class="img_upper tile "
-     ng-click='clicklips("HEAVY UPPER")'>
+<div class="tile img_upper" > 
+    <img ng-src="img/05_lips-mouth-heavy-upper@3x.png" 
+    />
+      <div class="text" ng-click='clicklips("HEAVY UPPER")' >
+               <p class="animate-text info ">The upper lip is thicker than the bottom one. </p>
+      </div>
+</div>
 <p id="lowertext" > HEAVY LOWER</p>
-<img src="img/06_lips-mouth-heavy-lower@3x.png" 
-     class="img_lower tile "
-     ng-click='clicklips("HEAVY LOWER")'>
 
+<div class="tile img_lower" > 
+    <img ng-src="img/06_lips-mouth-heavy-lower@3x.png" 
+    />
+      <div class="text" ng-click='clicklips("HEAVY LOWER")' >
+               <p class="animate-text info ">The bottom lip is thicker than the upper one. </p>
+      </div>
+</div>
 <div id="linha3"></div>
  
 </div>
@@ -650,7 +673,7 @@ position: fixed;
     <p id="Next" style="color:#fc2561" >NEXT <img src="img/icn-arrow.png">  </p> 
   </div>
 </md-card>
-<md-card id="shape_btn" ui-sref="app.result"  ng-click="salvar()"   >
+<md-card id="shape_btn"   ng-click="salvar()"   >
   <div id=""></div>
   <div id="">
     <p id="Next">NEXT <img src="img/icn-arrow-desable.png">  </p> 

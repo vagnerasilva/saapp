@@ -210,7 +210,7 @@
    #linha{
         position: absolute;
     left: 380px;
-    top: 328px;
+    top: 330px;
     width: 2px;
     height: 360px;
     z-index: 1;
@@ -221,7 +221,7 @@
     left: 380px;
     top: 722px;
     width: 2px;
-    height: 360px;
+    height: 358px;
     z-index: 1;
       background-color: #999999;
    }
@@ -231,7 +231,7 @@
     top: 522px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -255,7 +255,7 @@
     top: 912px;
 
     z-index: 1;
-      width: 336px;
+      width: 334px;
       height: 167.5px;
       background-color: #fc2561;
 
@@ -297,15 +297,25 @@
   <div id="black" ></div>
   <div id="boxpink1" ng-show="fair"  ></div>
   <div id="boxpink2" ng-show="light"  ></div>
-  <img  src="img/01_skin-fair@3x.png" 
-        class="img_skin_normal tile"
-        ng-click="clickcolor('FAIR')"
-        >
-  
-  <img src="img/02-skin-light@3x.png" 
-       class="img_skin_dry tile"
-       ng-click="clickcolor('LIGHT')"
-       >
+
+  <div class="tile img_skin_normal" > 
+    <img ng-src='img/01_skin-fair@3x.png' 
+    />
+      <div class="text" ng-click="clickcolor('FAIR')" >
+               <p class="animate-text info ">Light Beige Almost White. </p>
+      </div>
+  </div>
+
+
+  <div class="tile img_skin_dry" > 
+    <img ng-src='img/02-skin-light@3x.png' 
+    />
+      <div class="text" ng-click="clickcolor('LIGHT')" >
+               <p class="animate-text info ">Pink beige. </p>
+      </div>
+  </div>
+
+
 <div id="linha"></div>
 </div>
 
@@ -323,15 +333,24 @@
   <div id="black2" ></div>
   <div id="boxpink3" ng-show="mlight"  ></div>
   <div id="boxpink4" ng-show="mtan"  ></div>
-  <img src="img/03_skin-medium@3x.png" 
-       class="img_skin_oily tile"
-       ng-click="clickcolor('MEDIUM LIGHT')"
 
-       >
-  <img src="img/img-skin-m-tan@3x.png" 
-       class="img_skin_combination tile"
-       ng-click="clickcolor('MEDIUM TAN')"
-       >
+  <div class="tile img_skin_oily" > 
+    <img ng-src="img/03_skin-medium@3x.png" 
+    />
+      <div class="text" ng-click="clickcolor('MEDIUM LIGHT')" >
+               <p class="animate-text info ">Dark Beige Yellowish. </p>
+      </div>
+  </div>
+
+  <div class="tile img_skin_combination" > 
+    <img ng-src='img/img-skin-m-tan@3x.png' 
+    />
+      <div class="text" ng-click="clickcolor('MEDIUM TAN')" >
+               <p class="animate-text info ">Light Brown. </p>
+      </div>
+  </div>
+
+
   <div id="linha2"
 
       ></div>
@@ -361,14 +380,14 @@
                                                                       border: solid 1.5px #000000;"  >
   <div id=""></div>
   <div id="">
-    <p id="Next">NEXT <img src="img/icn-arrow-desable.png">  </p> 
+    <p id="Next" style="color:#fc2561"  >NEXT <img src="img/icn-arrow.png">  </p> 
   </div>
 </md-card>
 
-<md-card id="shape_btn"   ui-sref="app.skinshape"   >
+<md-card id="shape_btn"      >
   <div id=""></div>
   <div id="">
-    <p id="Next" style="color:#fc2561" >NEXT <img src="img/icn-arrow.png">  </p> 
+    <p id="Next"  >NEXT <img src="img/icn-arrow-desable.png">  </p> 
   </div>
 </md-card>
 <br>
