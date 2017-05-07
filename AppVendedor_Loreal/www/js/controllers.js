@@ -773,7 +773,8 @@ console.log($scope.resultado);
     $scope.light = false;
     $scope.mlight = false;
     $scope.mtan = false;
-
+    $scope.deep = false;
+    $scope.tan = false;
 
     $scope.nextcolor=false;
     $scope.clickcolor = function(valor){
@@ -782,44 +783,88 @@ console.log($scope.resultado);
       console.log($scope.user);
       if (valor=="FAIR") {
               $scope.fair= !($scope.fair);
-
+              $scope.resultado.url2= 'img/01_skin-fair@3x.png';
     $scope.light = false;
     $scope.mlight = false;
     $scope.mtan = false;
+    $scope.deep = false;
+    $scope.tan = false;
               $scope.nextcolor = true;
               console.log($scope.fair);
       }
       if(valor=="LIGHT") {
               $scope.light= !($scope.light);
+              $scope.resultado.url2= 'img/02-skin-light@3x.png';
     $scope.fair = false;
     $scope.mlight = false;
     $scope.mtan = false;
+    $scope.deep = false;
+    $scope.tan = false;
               $scope.nextcolor = true;
               console.log($scope.light);
       } 
       if(valor=="MEDIUM LIGHT") {
                $scope.mlight= !( $scope.mlight);
+               $scope.resultado.url2= 'img/03_skin-medium@3x.png';
           
 
     $scope.fair = false;
     $scope.light = false;
     $scope.mtan = false;
+    $scope.deep = false;
+    $scope.tan = false;
               $scope.nextcolor = true;
               console.log( $scope.mlight);
       }
       if(valor=="MEDIUM TAN") {
                $scope.mtan= !( $scope.mtan);
-             
+               $scope.resultado.url2= 'img/img-skin-m-tan@3x.png'; 
 
                   
     $scope.fair = false;
     $scope.light = false;
     $scope.mlight = false;
+    $scope.deep = false;
+    $scope.tan = false;
     
    
               $scope.nextcolor = true;
               console.log( $scope.mtan);
       }
+    if(valor=="TAN") {
+               $scope.tan= !( $scope.tan);
+               $scope.resultado.url2= 'img/06_skin-tan@3x.png'; 
+
+                  
+    $scope.fair = false;
+    $scope.light = false;
+    $scope.mlight = false;
+    $scope.mtan = false;
+    $scope.deep = false;
+ 
+    
+   
+              $scope.nextcolor = true;
+              console.log( $scope.tan);
+      }
+
+    if(valor=="DEEP") {
+               $scope.deep= !( $scope.deep);
+               $scope.resultado.url2= 'img/06_skin-deep@3x.png'; 
+
+                  
+    $scope.fair = false;
+    $scope.light = false;
+    $scope.mlight = false;
+    $scope.mtan = false;
+   
+    $scope.tan = false;
+    
+   
+              $scope.nextcolor = true;
+              console.log( $scope.deep);
+      }
+
 
 
 }// Fim dos skincolor
