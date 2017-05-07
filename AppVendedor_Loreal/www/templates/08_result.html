@@ -147,7 +147,7 @@
 .textimg_4{
       position: fixed;
     top: 350.5px;
-    left: 455.5px;
+    left: 470.5px;
   height: 34.5px;
  
   font-weight: bold;
@@ -296,22 +296,22 @@
       -- Product suggetion for ---
     </p>
     <p class="titulo"  >
-     {{cliente.consumername}}
+        {{cliente.consumername}} 
     </p>
     
-    <img ng-src="img/img_01.png" class="img_1 tile" >
+    <img ng-src="{{urls.url1}}" class="img_1 tile" >
       <p class="textimg_1" >{{cliente.type_skin}}</p>
       <p class="textimg_1b">SKIN</p>
-    <img src="img/img_02.png" class="img_2 tile" >
+    <img ng-src="{{urls.url2}}" class="img_2 tile" >
       <p class="textimg_2" >{{cliente.type_skincolor}}</p>
       <p class="textimg_2b" >SKIN</p>
-    <img src="img/img_03.png" class="img_3 tile" >
+    <img ng-src="{{urls.url3}}" class="img_3 tile" >
       <p class="textimg_3" >{{cliente.type_skinshape}}</p>
       <p class="textimg_3b" >FACE</p>
-    <img src="img/img_04.png" class="img_4 tile" >
+    <img ng-src="{{urls.url4}}" class="img_4 tile" >
       <p class="textimg_4" >{{cliente.type_eyes}}</p>
       <p class="textimg_4b" >EYES</p>
-    <img src="img/img_05.png" class="img_5 tile" >
+    <img ng-src="{{urls.url5}}" class="img_5 tile" >
       <p class="textimg_5" >{{cliente.type_lips}}</p>
       <p class="textimg_5b" >MOUTH</p>
 
@@ -319,7 +319,7 @@
       SUGGESTED 
 </p>
 <p class="titulo3"  >
-      PRODUCTS 
+      PRODUCTS
 </p>
 
 <p class="titulo3"  >
@@ -629,14 +629,14 @@
   .titulo{
     position: fixed;
     top: 167px;
-    left: 148px;
-      /*width: 644px; */
+    left: 42px;
+    /*  width: 644px; */
   
   height: 42px;
   
   font-size: 56px;
   letter-spacing: -0.1px;
-  text-align: center;
+  text-align: center; 
   color: #000000;
 
   }

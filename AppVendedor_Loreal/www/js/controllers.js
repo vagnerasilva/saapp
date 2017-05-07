@@ -17,12 +17,18 @@ angular.module('starter.controllers', [])
 
 
 
+    $scope.urls={}
+    $scope.urls.url1= "teste"
+    $scope.urls.url2= "teste"
+    $scope.urls.url3= "teste"
+    $scope.urls.url4= "teste"
+    $scope.urls.url5= "teste"
+    
+    $scope.cliente={};
 
-    $scope.cliente={}
+    $scope.user = {};
 
-    $scope.user = { };
-
-
+    //$scope.user.consumername= "VAGNER ANTONIO DA SILVA"
 
     var ref = new Firebase("https://appvendedorloreal.firebaseio.com/");
 
@@ -54,7 +60,7 @@ cont ++
         //  setTimeout(function() {
         //    console.log(" Id do cadastro"+ cadastroID)
 //
-        //  }, 5000);
+        //  }, 5000);lvar
 
       return "cadastroID"
     };
@@ -64,6 +70,12 @@ cont ++
         $scope.cliente = user;
 
         return $scope.cliente
+     }
+  var salvoUrl = function(urls) {
+
+        $scope.urls = urls;
+        console.log($scope.urls);
+        return $scope.urls
      }
 
   var novofimcliente = function(user) {
@@ -99,6 +111,10 @@ cont ++
           // Simple index lookup
             return $scope.cliente;
             },
+        geturl: function() {
+          // Simple index lookup
+            return $scope.urls;
+            },
         getuser: function() {
           // Simple index lookup
             return $scope.user;
@@ -106,6 +122,10 @@ cont ++
         salvarcadastro: function(user) {
           // Simple index lookup
             return salvoCliente(user);
+            },
+        salvandourl: function(url) {
+          // Simple index lookup
+            return salvoUrl(url);
             },
         novofim: function(user) {
           // Simple index lookup
@@ -698,8 +718,8 @@ cont ++
             $scope.email=null;
           }
     });
-
-$scope.resultado={}
+$scope.urls = OtherFriends.geturl();
+console.log($scope.urls)
 
 //#### PAGINa skintype  ##########/////
     
@@ -707,50 +727,50 @@ $scope.resultado={}
     $scope.dry = false;
     $scope.oil = false;
     $scope.combination = false;
-
-
+    
+    
     $scope.nexttype=false;
     $scope.clicktype = function(valor){
       $scope.user.type_skin= valor;
+      
+    //  console.log($scope.user)
 
-      console.log($scope.user)
+//console.log(" Valores do user ")
 
-console.log(" Valores do user ")
-
-      console.log($scope.user);
+   //   console.log($scope.user);
       if (valor=="NORMAL") {
               $scope.normal= !($scope.normal);
-              $scope.resultado.url1= 'img/normal.png';
+              $scope.urls.url1= 'img/normal.png';
     $scope.dry = false;
     $scope.oil = false;
     $scope.combination = false;
                $scope.nexttype = true;
-              console.log($scope.normal);
+        //      console.log($scope.normal);
       }
       if(valor=="DRY") {
               $scope.dry= !($scope.dry);
-              $scope.resultado.url1= 'img/dry.png';
+             $scope.urls.url1= 'img/dry.png';
     $scope.normal = false;
    
     $scope.oil = false;
     $scope.combination = false;
                $scope.nexttype = true;
-              console.log($scope.dry);
+        //      console.log($scope.dry);
       } 
       if(valor=="OILY") {
                 $scope.oil= !(  $scope.oil);
-                $scope.resultado.url1= 'img/oily.png';
+                $scope.urls.url1= 'img/oily.png';
 
     $scope.normal = false;
     $scope.dry = false;
 
     $scope.combination = false;
                $scope.nexttype = true;
-              console.log(  $scope.oil);
+         //     console.log(  $scope.oil);
       }
       if(valor=="COMBINATION") {
                $scope.combination= !( $scope.combination);
-               $scope.resultado.url1= 'img/combination.png';
+               $scope.urls.url1= 'img/combination.png';
                
                   
     $scope.normal = false;
@@ -759,9 +779,11 @@ console.log(" Valores do user ")
    
    
                $scope.nexttype = true;
-              console.log( $scope.combination);
+          //    console.log( $scope.combination);
       }
-console.log($scope.resultado);
+    //  $scope.urls = OtherFriends.salvandourl($scope.url1);
+    //   console.log($scope.url);
+       
 
 }// Fim dos skintype
 
@@ -775,37 +797,38 @@ console.log($scope.resultado);
     $scope.mtan = false;
     $scope.deep = false;
     $scope.tan = false;
-
+    
     $scope.nextcolor=false;
     $scope.clickcolor = function(valor){
       $scope.user.type_skincolor= valor;
-      console.log("clicado no skin color " + valor );
-      console.log($scope.user);
+     
+  //    console.log("clicado no skin color " + valor );
+    //  console.log($scope.user);
       if (valor=="FAIR") {
               $scope.fair= !($scope.fair);
-              $scope.resultado.url2= 'img/01_skin-fair@3x.png';
+             $scope.urls.url2= 'img/01_skin-fair@3x.png';
     $scope.light = false;
     $scope.mlight = false;
     $scope.mtan = false;
     $scope.deep = false;
     $scope.tan = false;
               $scope.nextcolor = true;
-              console.log($scope.fair);
+  //            console.log($scope.fair);
       }
       if(valor=="LIGHT") {
               $scope.light= !($scope.light);
-              $scope.resultado.url2= 'img/02-skin-light@3x.png';
+              $scope.urls.url2= 'img/02-skin-light@3x.png';
     $scope.fair = false;
     $scope.mlight = false;
     $scope.mtan = false;
     $scope.deep = false;
     $scope.tan = false;
               $scope.nextcolor = true;
-              console.log($scope.light);
+     //         console.log($scope.light);
       } 
       if(valor=="MEDIUM LIGHT") {
                $scope.mlight= !( $scope.mlight);
-               $scope.resultado.url2= 'img/03_skin-medium@3x.png';
+               $scope.urls.url2= 'img/03_skin-medium@3x.png';
           
 
     $scope.fair = false;
@@ -814,11 +837,11 @@ console.log($scope.resultado);
     $scope.deep = false;
     $scope.tan = false;
               $scope.nextcolor = true;
-              console.log( $scope.mlight);
+      //        console.log( $scope.mlight);
       }
       if(valor=="MEDIUM TAN") {
                $scope.mtan= !( $scope.mtan);
-               $scope.resultado.url2= 'img/img-skin-m-tan@3x.png'; 
+               $scope.urls.url2= 'img/img-skin-m-tan@3x.png'; 
 
                   
     $scope.fair = false;
@@ -829,11 +852,11 @@ console.log($scope.resultado);
     
    
               $scope.nextcolor = true;
-              console.log( $scope.mtan);
+    //          console.log( $scope.mtan);
       }
     if(valor=="TAN") {
                $scope.tan= !( $scope.tan);
-               $scope.resultado.url2= 'img/06_skin-tan@3x.png'; 
+            $scope.urls.url2= 'img/06_skin-tan@3x.png'; 
 
                   
     $scope.fair = false;
@@ -845,12 +868,12 @@ console.log($scope.resultado);
     
    
               $scope.nextcolor = true;
-              console.log( $scope.tan);
+     //         console.log( $scope.tan);
       }
 
     if(valor=="DEEP") {
                $scope.deep= !( $scope.deep);
-               $scope.resultado.url2= 'img/06_skin-deep@3x.png'; 
+               $scope.urls.url2= 'img/06_skin-deep@3x.png'; 
 
                   
     $scope.fair = false;
@@ -862,11 +885,12 @@ console.log($scope.resultado);
     
    
               $scope.nextcolor = true;
-              console.log( $scope.deep);
+      //        console.log( $scope.deep);
       }
+     // $scope.urls = OtherFriends.salvandourl($scope.url2);
+     //  console.log($scope.urls);
 
-
-
+       
 }// Fim dos skincolor
 
 //#### PAGINA SHAPE EFEITO MARCADO ##########/////
@@ -881,27 +905,29 @@ console.log($scope.resultado);
 
     $scope.clickshape = function(valor){
       $scope.user.type_skinshape= valor;
-      console.log("clicado no " + valor );
+    //  console.log("clicado no " + valor );
       if (valor=="CIRCLE") {
               $scope.circle= !($scope.circle);
-
+              $scope.urls.url3= 'img/01-face-circle@3x.png'; 
     $scope.oval = false;
     $scope.square = false;
     $scope.heart = false;
               $scope.nextshapes = true;
-              console.log($scope.circle);
+     //         console.log($scope.circle);
       }
       if(valor=="OVAL") {
               $scope.oval= !($scope.oval);
+               $scope.urls.url3= 'img/02_face-oval@3x.png'; 
     $scope.circle = false;
 
     $scope.square = false;
     $scope.heart = false;
               $scope.nextshapes = true;
-              console.log($scope.oval);
+      //        console.log($scope.oval);
       } 
       if(valor=="SQUARE") {
               $scope.square= !($scope.square);
+              $scope.urls.url3= 'img/03_face_shape-square@3x.png'; 
           
 
     $scope.circle = false;
@@ -909,10 +935,11 @@ console.log($scope.resultado);
 
     $scope.heart = false;
               $scope.nextshapes = true;
-              console.log($scope.square);
+      //        console.log($scope.square);
       }
       if(valor=="HEART") {
               $scope.heart= !($scope.heart);
+               $scope.urls.url3= 'img/04_face-shape-heart@3x.png'; 
              
 
                   
@@ -921,7 +948,7 @@ console.log($scope.resultado);
     $scope.square = false;
    
               $scope.nextshapes = true;
-              console.log($scope.heart);
+      //        console.log($scope.heart);
       }
 
 
@@ -937,13 +964,14 @@ console.log($scope.resultado);
     $scope.deepset =    false;
     $scope.produting =  false;
     $scope.monolid =    false;
-
+   
     $scope.nexteyes=false;
     $scope.clickeyes = function(valor){
        $scope.user.type_eyes= valor;
-      console.log("clicado no " + valor );
+    //  console.log("clicado no " + valor );
       if (valor=="UPTURNED") {
               $scope.upturned= !($scope.upturned);
+               $scope.urls.url4= 'img/01_eye-upturned@3x.png'; 
 
     
     $scope.hooded =     false;
@@ -955,10 +983,11 @@ console.log($scope.resultado);
     $scope.monolid =    false;
 
               $scope.nexteyes = true;
-              console.log($scope.upturned);
+      //        console.log($scope.upturned);
       }
       if(valor=="HOODED") {
               $scope.hooded= !($scope.hooded);
+               $scope.urls.url4= 'img/02-eyes-hooded@3x.png'; 
                  
 
                   
@@ -971,10 +1000,11 @@ console.log($scope.resultado);
     $scope.produting =  false;
     $scope.monolid =    false;
               $scope.nexteyes = true;
-              console.log($scope.hooded);
+         //     console.log($scope.hooded);
       } 
       if(valor=="DOWNTURNED") {
               $scope.downturned= !($scope.downturned);
+               $scope.urls.url4= 'img/03_eye-downturned@3x.png'; 
           
 
                   
@@ -987,10 +1017,11 @@ console.log($scope.resultado);
     $scope.produting =  false;
     $scope.monolid =    false;
               $scope.nexteyes = true;
-              console.log($scope.downturned);
+          //    console.log($scope.downturned);
       }
       if(valor=="WIDE SET") {
               $scope.wideset= !($scope.wideset);
+               $scope.urls.url4= 'img/04_eyes-wide-set@3x.png'; 
              
 
     $scope.upturned =   false;
@@ -1002,10 +1033,11 @@ console.log($scope.resultado);
     $scope.produting =  false;
     $scope.monolid =    false;
               $scope.nexteyes = true;
-              console.log($scope.wideset);
+          //    console.log($scope.wideset);
       }
       if(valor=="CLOSE SET") {
               $scope.closeset= !($scope.closeset);
+               $scope.urls.url4= 'img/05_eye-close-set@3x.png'; 
 
 
                   
@@ -1018,10 +1050,11 @@ console.log($scope.resultado);
     $scope.produting =  false;
     $scope.monolid =    false;
               $scope.nexteyes = true;
-              console.log($scope.closeset);
+          //    console.log($scope.closeset);
       }
     if(valor=="DEEP SET") {
               $scope.deepset= !($scope.deepset);
+               $scope.urls.url4= 'img/06_eye-deep-set@3x.png'; 
 
 
     $scope.upturned =   false;
@@ -1034,12 +1067,13 @@ console.log($scope.resultado);
     $scope.monolid =    false;
 
               $scope.nexteyes = true;
-              console.log($scope.deepset);
+            //  console.log($scope.deepset);
       }
       //$scope.bar = !($scope.bar);
     if(valor=="PROTUDING") {
       console.log(valor)
               $scope.produting= !($scope.produting);
+               $scope.urls.url4= 'img/07_eyes-protuding@3x.png'; 
 
 
                   
@@ -1053,10 +1087,11 @@ console.log($scope.resultado);
     $scope.monolid =    false;
 
               $scope.nexteyes = true;
-              console.log($scope.produting);
+            //  console.log($scope.produting);
       }
     if(valor=="MONOLID") {
               $scope.monolid= !($scope.monolid);
+               $scope.urls.url4= 'img/08_eye-monolid@3x.png'; 
 
 
                   
@@ -1070,8 +1105,9 @@ console.log($scope.resultado);
 
 
               $scope.nexteyes = true;
-              console.log($scope.monolid);
+          //    console.log($scope.monolid);
       }
+
     } // fIM DA FUNCAO eYES 
 
 //#### PAGINA LIPS EFEITO MARCADO ##########/////
@@ -1086,10 +1122,11 @@ console.log($scope.resultado);
     $scope.nextlips=false;
     $scope.clicklips = function(valor){
       $scope.user.type_lips= valor;
-      console.log("clicado no " + valor );
-      console.log($scope.user);
+    //  console.log("clicado no " + valor );
+    //  console.log($scope.user);
       if (valor=="SMALL") {
               $scope.small= !($scope.small);
+               $scope.urls.url5= 'img/01_lips-mouth-small@3x.png'; 
 
                   $scope.full= false
                   $scope.wide = false;
@@ -1097,10 +1134,11 @@ console.log($scope.resultado);
                   $scope.upper = false;
                   $scope.lower = false;
               $scope.nextlips = true;
-              console.log($scope.small);
+       //       console.log($scope.small);
       }
       if(valor=="FULL") {
               $scope.full= !($scope.full);
+              $scope.urls.url5= 'img/04_lips-mouth-full@3x.png';
                   $scope.small= false;
 
                   
@@ -1109,10 +1147,11 @@ console.log($scope.resultado);
                   $scope.upper = false;
                   $scope.lower = false;
               $scope.nextlips = true;
-              console.log($scope.full);
+       //       console.log($scope.full);
       } 
       if(valor=="WIDE") {
               $scope.wide= !($scope.wide);
+              $scope.urls.url5= 'img/03_lips-mouth-wide@3x.png';
           
 
                   
@@ -1123,10 +1162,11 @@ console.log($scope.resultado);
     $scope.upper = false;
     $scope.lower = false;
               $scope.nextlips = true;
-              console.log($scope.full);
+       //       console.log($scope.full);
       }
       if(valor=="THIN") {
               $scope.thin= !($scope.thin);
+              $scope.urls.url5= 'img/02_lips-mouth-thin@3x.png';
              
 
                   
@@ -1137,10 +1177,11 @@ console.log($scope.resultado);
     $scope.upper = false;
     $scope.lower = false;
               $scope.nextlips = true;
-              console.log($scope.thin);
+         //     console.log($scope.thin);
       }
       if(valor=="HEAVY UPPER") {
               $scope.upper= !($scope.upper);
+              $scope.urls.url5= 'img/05_lips-mouth-heavy-upper@3x.png';
 
 
                   
@@ -1151,10 +1192,11 @@ console.log($scope.resultado);
 
     $scope.lower = false;
               $scope.nextlips = true;
-              console.log($scope.upper);
+           //   console.log($scope.upper);
       }
       if(valor=="HEAVY LOWER") {
               $scope.lower= !($scope.lower);
+              $scope.urls.url5= 'img/06_lips-mouth-heavy-lower@3x.png';
 
 
                   
@@ -1165,10 +1207,10 @@ console.log($scope.resultado);
     $scope.upper = false;
 
               $scope.nextlips = true;
-              console.log($scope.lower);
+          //    console.log($scope.lower);
       }
       //$scope.bar = !($scope.bar);
-      
+
     }
 
 
@@ -1355,9 +1397,10 @@ console.log($scope.resultado);
       },
     ];
    $scope.salvar = function() {
-       console.log($scope.user)
+     //  console.log($scope.user)
             $scope.cliente = OtherFriends.salvarcadastro($scope.user);
-       console.log($scope.cliente )
+       console.log($scope.urls );
+
     }
 
     $scope.cliente = OtherFriends.getcliente();
